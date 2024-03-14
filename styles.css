@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 150px;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+}
+
+.main-content {
+    background-color: #f2f2f2;
+    padding: 50px;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tour-form {
+    padding: 50px;
+    text-align: center;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociales a {
+    margin: 0 10px; /* Ajusta el espacio entre los iconos */
+}
+
+.redes-sociales img {
+    width: 30px; /* Ajusta el tamaño de los iconos */
+}
+
+.carousel-item img {
+    height: 300px; /* Ajusta esta altura según tus preferencias */
+    object-fit: cover; /* Esto hará que todas las imágenes se ajusten al mismo tamaño sin distorsionar */
+}
+
