@@ -8,16 +8,23 @@ body {
 header {
     text-align: center;
     padding: 20px;
+    background-color: #67e5144f;
 }
 
 .logo-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
     margin-bottom: 20px;
 }
 
 .logo-container img {
-    width: 150px;
+    width: 100%;
     height: auto;
 }
+
 
 h1 {
     margin: 0;
