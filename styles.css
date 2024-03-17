@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: #72d35f; /* Naranja más oscuro */
+    background-color: #72d35f; 
 }
 
 .tour-form {
@@ -95,16 +95,16 @@ footer {
 }
 
 .redes-sociales a {
-    margin: 0 10px; /* Ajusta el espacio entre los iconos */
+    margin: 0 10px; 
 }
 
 .redes-sociales img {
-    width: 30px; /* Ajusta el tamaño de los iconos */
+    width: 30px; 
 }
 
 .carousel-item img {
-    height: 600px; /* Ajusta esta altura según tus preferencias */
-    object-fit: cover; /* Esto hará que todas las imágenes se ajusten al mismo tamaño sin distorsionar */
+    height: 600px; 
+    object-fit: cover; 
 }
 /*testimonios*/
 
@@ -234,13 +234,13 @@ footer {
 
 .tour-image {
     overflow: hidden;
-    height: 350px; /* Altura específica para el contenedor de la imagen */
+    height: 350px; 
 }
 
 .tour-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* La imagen se ajustará dentro del contenedor */
+    object-fit: cover; 
 }
 
 .card-title {
@@ -294,20 +294,20 @@ footer {
     scrollbar-width: none;
 }
 .section-carrusel-2::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
+    width: 10px; 
 }
 
 .section-carrusel-2::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    background: #f1f1f1; 
 }
 
 .section-carrusel-2::-webkit-scrollbar-thumb {
-    background: #888; /* Color del "pomo" de la barra de desplazamiento */
-    border-radius: 5px; /* Borde redondeado */
+    background: #888; 
+    border-radius: 5px; 
 }
 
 .section-carrusel-2::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color del "pomo" de la barra de desplazamiento al pasar el cursor sobre él */
+    background: #555; 
 }
 
 .mini-icono{
@@ -394,10 +394,13 @@ footer {
     transition: transform 0.3s ease;
 }
 
+
 .contact-option.whatsapp:hover {
     transform: scale(1.3);
+
 }
 
 .contact-option.gmail:hover {
     transform: scale(1.3);
+
 }
