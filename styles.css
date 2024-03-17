@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration:none !important;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -144,8 +151,6 @@ footer {
     border-radius: 50%;
 }
 
-
-
 .card {
     border: none;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -210,6 +215,8 @@ footer {
     color: #333;
 }
 
+/*tours*/
+
 .title-tours{
     display: flex;
     justify-content: center;
@@ -249,11 +256,6 @@ footer {
     font-weight: bold;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 .carousel-container-cards {
     display: flex;
@@ -330,15 +332,15 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    padding: 10px; /* Reducido el padding */
+    padding: 10px; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .review-content p {
-    font-size: 16px; /* Reducido el tamaño de la fuente */
-    margin-bottom: 10px; /* Reducido el espacio entre los párrafos */
+    font-size: 16px; 
+    margin-bottom: 10px; 
 }
 
 .review-author {
@@ -347,10 +349,10 @@ footer {
 }
 
 .review-author img {
-    width: 40px; /* Reducido el tamaño de la imagen */
-    height: 40px; /* Reducido el tamaño de la imagen */
+    width: 40px; 
+    height: 40px; 
     border-radius: 50%;
-    margin-right: 10px; /* Reducido el espacio entre la imagen y el nombre del autor */
+    margin-right: 10px; 
 }
 
 .author-info h6 {
@@ -382,7 +384,6 @@ footer {
 }
 
 .contact-option {
-    text-decoration: none;
     margin: 20px;
     transition: transform 0.3s ease;
 }
