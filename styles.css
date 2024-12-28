@@ -293,11 +293,21 @@ footer {
     height: 350px; 
 }
 
+
 .tour-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; 
+    height: 200px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño del contenedor sin distorsionarse */
 }
+
+.tour-card-body {
+    padding: 1rem; /* Ajusta el relleno según sea necesario */
+    height: 100%; /* Asegura que el contenido dentro de la tarjeta ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column; /* Esto permite que los elementos dentro del cuerpo de la tarjeta se organicen verticalmente */
+    justify-content: space-between; /* Esto distribuye el contenido de forma equilibrada */
+}
+
 
 .card-title {
     text-align: center;
