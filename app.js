@@ -134,10 +134,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    function toggleVideo() {
-        var video = document.getElementById("promo-video");
-        var controlButton = document.getElementById("video-control");
+    var video = document.getElementById("promo-video");
+    var controlButton = document.getElementById("video-control");
 
+    // Función para alternar entre play y pause
+    function toggleVideo() {
         if (video.paused) {
             video.play();
             controlButton.textContent = "Pause";
@@ -146,3 +147,8 @@ document.addEventListener('DOMContentLoaded', function() {
             controlButton.textContent = "Play";
         }
     }
+
+    // Evento para cuando el video termine
+    video.addEventListener("ended", function() {
+        controlButton.textContent = "Play";  // Cambia el texto del botón a "Play"
+    });
