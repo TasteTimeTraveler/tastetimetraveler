@@ -308,7 +308,15 @@ footer {
     justify-content: space-between; /* Esto distribuye el contenido de forma equilibrada */
 }
 
-
+.tour-title {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto según sea necesario */
+    font-weight: bold; /* Establece un peso de fuente más pesado */
+    line-height: 1.3; /* Asegura un buen espaciado entre las líneas */
+    overflow: hidden; /* Esto evita que el texto se desborde */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos al final si el texto es demasiado largo */
+    white-space: nowrap; /* Impide que el texto se rompa en múltiples líneas */
+    margin-bottom: 10px; /* Ajusta el espacio entre el título y el resto del contenido */
+}
 .card-title {
     text-align: center;
     font-size: 18px;
