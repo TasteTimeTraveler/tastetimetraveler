@@ -52,6 +52,18 @@ h2 {
     text-align: center;
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-content {
+    width: 100%;
+    max-width: 800px; 
+    height: auto; 
+    max-height: 400px; 
+}
 .video-promo {
     position: relative;
     left: 0;
@@ -60,6 +72,7 @@ h2 {
     height: 100%;
     object-fit: cover;
 }
+
 
 #button-contactus{
     color: #e9ecef;
