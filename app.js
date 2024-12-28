@@ -150,5 +150,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Evento para cuando el video termine
     video.addEventListener("ended", function() {
-        controlButton.textContent = "Play";  // Cambia el texto del botón a "Play"
+        controlButton.textContent = "Play";  
     });
