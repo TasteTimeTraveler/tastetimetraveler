@@ -134,3 +134,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    function toggleVideo() {
+        var video = document.getElementById("promo-video");
+        var controlButton = document.getElementById("video-control");
+
+        if (video.paused) {
+            video.play();
+            controlButton.textContent = "Pause";
+        } else {
+            video.pause();
+            controlButton.textContent = "Play";
+        }
+    }
