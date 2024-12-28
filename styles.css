@@ -75,7 +75,7 @@ h2 {
 
 .video-control-btn {
     position: absolute;
-    top: 50%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 15px;
