@@ -150,6 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Evento para cuando el video termine
     video.addEventListener("ended", function() {
-        controlButton.classList.add('hidden'); 
+        controlButton.style.display = 'none';
         
     });
