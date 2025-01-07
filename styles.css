@@ -24,12 +24,9 @@ header {
 }
 
 .logo-container {
-    width: 150px;
-    height: 150px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
-    margin-bottom: 20px;
 }
 
 .logo-container img {
@@ -130,7 +127,7 @@ button:hover {
 .tour-form {
     padding: 50px;
     text-align: center;
-    background-color: #black;
+    background-color: black;
 }
 
 form input,
