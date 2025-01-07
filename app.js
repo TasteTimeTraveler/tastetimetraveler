@@ -6,6 +6,12 @@ const container = document.querySelector('.carousel-container-cards');
     const menu = document.querySelector('.menu');
     const menuLinks = document.querySelectorAll('.menu li a');
 
+const overlay = document.getElementById('video-overlay');
+const videoControl = document.getElementById('video-control');
+
+var video = document.getElementById("promo-video");
+var controlButton = document.getElementById("video-control");
+
     function showCards() {
         cards.forEach(card => {
             card.style.display = 'none';
@@ -137,19 +143,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    var video = document.getElementById("promo-video");
-    var controlButton = document.getElementById("video-control");
+
 
     // Función para alternar entre play y pause
     function toggleVideo() {
         if (video.paused) {
             video.play();
-            controlButton.textContent = "Pause";
+            overlay.classList.add('hidden'); // Ocultar overlay
+            videoControl.textContent = 'Pause';
         } else {
             video.pause();
-            controlButton.textContent = "Play";
+            overlay.classList.remove('hidden'); // Mostrar overlay
+            videoControl.textContent = 'Play';
         }
     }
+
+    video.addEventListener('play', () => {
+        overlay.classList.add('hidden');
+    });
+    
+    // Mostrar overlay si el video se pausa
+    video.addEventListener('pause', () => {
+        overlay.classList.remove('hidden');
+    });
 
     // Evento para cuando el video termine
     video.addEventListener("ended", function() {

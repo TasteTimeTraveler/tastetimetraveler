@@ -103,13 +103,50 @@ h2 {
     color: #fff;
 }
 
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+}
+
+.video-overlay-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.overlay-text h1 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.video-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .video-content {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     max-width: 800px; 
     height: auto; 
@@ -123,6 +160,9 @@ h2 {
     height: 100%;
     object-fit: cover;
 }
+
+
+
 .btn-vermas {
     background-color: black !important;
     color: #fff !important;
@@ -147,7 +187,7 @@ h2 {
 }
 
 .video-control-btn:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo más opaco al pasar el ratón */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más opaco al pasar el ratón */
 }
 
 #button-contactus{
