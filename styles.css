@@ -24,26 +24,30 @@ header {
 }
 
 .logo-container {
-   
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-height: 100px; /* Ajusta el tamaño máximo del logo */
+    width: auto; 
 }
 
 .titulo h1 {
     margin: 0;
     font-size: 24px; /* Tamaño del título */
-    color: #fff; /* Color del título */
-    text-align: center;
+    color: #333; /* Color del título */
 }
 
 .titulo p {
     margin: 5px 0 0; /* Espaciado entre el título y el párrafo */
-    font-size: 15px; /* Tamaño del texto del párrafo */
-    color: #fff; /* Color del título */
-    text-align: center;
-}
-
+    font-size: 16px; /* Tamaño del texto del párrafo */
+    color: #666; /* Color del texto del párrafo */
+} 
 h1 {
     font-size: 24px;
     color: #333;
@@ -59,7 +63,6 @@ h2 {
     background-color: black;
     padding: 100px;
     text-align: center;
-    color: #fff;
 }
 
 .video-container {
