@@ -546,9 +546,8 @@ footer {
 /*contacto*/
 .contact-section {
     text-align: center;
-    background-color: black;
+    background-color: #fff;
     padding: 50px 0;
-    color: #fff;
 }
 
 .contact-options {
