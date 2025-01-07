@@ -45,6 +45,8 @@ header {
     gap: 20px;
     margin: 0;
     padding: 0;
+    background-color: white; /* Asegura el color de fondo blanco */
+    transition: background-color 0.3s;
 }
 
 .menu li a {
@@ -76,6 +78,10 @@ header {
     background: black;
     border-radius: 2px;
     
+}
+
+.hamburger.open span {
+    background-color: black;
 }
 
 h1 {
@@ -432,14 +438,6 @@ footer {
         display: block;
         padding: 15px 20px; /* Espaciado interno */
         margin: 5px 0; /* Separación entre enlaces */
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
     }
 
     .menu.active {

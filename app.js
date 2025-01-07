@@ -3,7 +3,8 @@ const container = document.querySelector('.carousel-container-cards');
     const cards = document.querySelectorAll('.cards-tour');
     let currentIndex = 0;
     const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
+    const menu = document.querySelector('.menu');
+    const menuLinks = document.querySelectorAll('.menu li a');
 
     function showCards() {
         cards.forEach(card => {
@@ -157,6 +158,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+    
+    // Función para cerrar el menú al hacer clic en un enlace
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+            hamburger.classList.remove('open');
+        });
+    });
