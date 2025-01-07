@@ -54,7 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
             './assets/monumentos/independencia.png',
             './assets/monumentos/kiosko.png',
             './assets/monumentos/capilla.png',
-            './assets/monumentos/palacio.png'
+            './assets/monumentos/palacio.png',
+            './assets/monumentos/iglesia.png',
+            './assets/monumentos/catedral-de-morelia.png',
+            './assets/monumentos/independencia.png',
+            './assets/monumentos/kiosko.png',
+            './assets/monumentos/capilla.png',
+            './assets/monumentos/palacio.png',
+            './assets/monumentos/iglesia.png',
                 ];
         
         monumentIcons.forEach(icon => {
