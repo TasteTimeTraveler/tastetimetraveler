@@ -96,6 +96,22 @@ h2 {
     margin-bottom: 15px; 
 }
 
+.image-overlay {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor sin distorsionarse */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    display: block;
+}
+
+/* Ajustes para el contenedor de imagen */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa la altura total de la ventana */
+    overflow: hidden;
+}
+
 .main-content {
     background-color: black;
     padding: 100px;
@@ -103,29 +119,6 @@ h2 {
     color: #fff;
 }
 
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    transition: opacity 0.5s ease;
-}
-
-.video-overlay-image {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
-    object-position: center; /* Centra la imagen dentro del contenedor */
-    display: block;
-    margin-bottom: 20px;
-}
 
 .overlay-text h1 {
     color: white;
@@ -134,35 +127,6 @@ h2 {
     margin: 0;
 }
 
-.video-overlay.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-.video-content {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 800px; 
-    height: auto; 
-    max-height: 400px; 
-}
-.video-promo {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 
 
@@ -170,28 +134,7 @@ h2 {
     background-color: black !important;
     color: #fff !important;
 }
-.video-control-btn {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con opacidad */
-    color: black; /* Letras negras */
-    border: none;
-    border-radius: 50%; /* Botón redondo */
-    font-size: 20px;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.video-control-btn:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo más opaco al pasar el ratón */
-}
 
 #button-contactus{
     color: #e9ecef;
@@ -456,6 +399,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .image-overlay {
+        width: 100%; /* Se asegura de que ocupe todo el ancho en pantallas medianas */
+        height: auto;
+    }
+
     .cards-tour {
         flex: 0 0 calc(100% / 2);
     }
@@ -495,6 +444,12 @@ footer {
 }
 
 @media (max-width: 480px) {
+
+    .image-overlay {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        height: auto;
+    }
+    
     .cards-tour {
         flex: 0 0 calc(100%);
     }
