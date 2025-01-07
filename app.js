@@ -2,6 +2,8 @@
 const container = document.querySelector('.carousel-container-cards');
     const cards = document.querySelectorAll('.cards-tour');
     let currentIndex = 0;
+    const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
 
     function showCards() {
         cards.forEach(card => {
@@ -153,3 +155,8 @@ document.addEventListener('DOMContentLoaded', function() {
         controlButton.style.display = 'none';
         
     });
+
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
