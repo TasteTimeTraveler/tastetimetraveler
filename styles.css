@@ -17,7 +17,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: white;
     color: white;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    color: white;
 }
 
 .logo img {
@@ -46,9 +45,10 @@ header {
 
 .menu li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 16px;
     transition: color 0.3s;
+    padding: 10px 15px;
 }
 
 .menu li a:hover {
@@ -412,8 +412,27 @@ footer {
         right: 20px;
         background: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
+        border-radius: 0px;
         overflow: hidden;
+        padding: 10px 0;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 15px 20px; /* Espaciado interno */
+        margin: 5px 0; /* Separación entre enlaces */
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .menu.active {
