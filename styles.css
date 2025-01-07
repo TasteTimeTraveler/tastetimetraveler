@@ -33,6 +33,8 @@ header {
 .logo img {
     max-height: 50px;
     width: auto;
+    border-radius: 50%;
+
 }
 
 .menu {
