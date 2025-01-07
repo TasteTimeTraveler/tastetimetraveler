@@ -20,7 +20,7 @@ header {
     justify-content: space-between; /* Deja espacio entre el logo y el texto */
     padding: 10px 20px;
     background-color: black;
-    color: #fff
+    color: #fff;
 }
 
 .logo-container {
@@ -43,7 +43,7 @@ header {
 
 .titulo p {
     margin: 5px 0 0; /* Espaciado entre el título y el párrafo */
-    font-size: 16px; /* Tamaño del texto del párrafo */
+    font-size: 15px; /* Tamaño del texto del párrafo */
     color: #666; /* Color del texto del párrafo */
     text-align: center;
 } 
