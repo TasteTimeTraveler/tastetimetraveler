@@ -11,15 +11,23 @@
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="assets/logo/logo.jpg" alt="Taste and Time Traveler">
-        </div>
-        <div class="titulo">
-            <h1>México City Walking Tours</h1>
-            <p>Step Back in Time, Savor the Moment: Taste and Time Traveler's Walking tours in Mexico City Await</p>
-        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logo/logo.jpg" alt="Logo Taste and Time Traveler">
+            </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu">
+                <li><a href="#home">Página Principal</a></li>
+                <li><a href="#experiences">Nuestras Experiencias</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="bg-light py-5 video-promo">
+    <section id="home" class="bg-light py-5 video-promo">
         <div class="container">
             <div class="video-container" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
                 <video 
@@ -48,7 +56,7 @@
             <button><a id="button-contactus" href="#section-carrusel-2">Book Your Walking Tour Now</a></button>
         </div>
     </section>
-    <section class="tours-grid bg-light py-5">
+    <section  id="experiences" class="tours-grid bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-4">Available Tours</h2>
             <div class="row">
@@ -134,7 +142,7 @@
         </form>
     </section-->
         <!--iframe src="https://www.tripadvisor.es/Attraction_Review-g150800-d26723812-Reviews-Taste_Time_Traveler-Mexico_City_Central_Mexico_and_Gulf_Coast.html#/media-atf/26723812/?albumid=-160&type=0&category=-160" width="100%" height="600px" frameborder="0"></iframe-->  
-    <section class="faq-section">
+    <section id="faq" class="faq-section">
         <div class="container">
             <h2>Frequent questions</h2>
             <div class="accordion" id="faqAccordion">
