@@ -38,12 +38,14 @@ header {
     margin: 0;
     font-size: 24px; /* Tamaño del título */
     color: #333; /* Color del título */
+    text-align: center;
 }
 
 .titulo p {
     margin: 5px 0 0; /* Espaciado entre el título y el párrafo */
     font-size: 16px; /* Tamaño del texto del párrafo */
     color: #666; /* Color del texto del párrafo */
+    text-align: center;
 } 
 h1 {
     font-size: 24px;
