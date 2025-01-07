@@ -15,9 +15,12 @@ body {
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #67e5144f;
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: space-between; /* Deja espacio entre el logo y el texto */
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff
 }
 
 .logo-container {
@@ -30,11 +33,21 @@ header {
 }
 
 .logo-container img {
-    width: 100%;
-    height: auto;
+    max-height: 100px; /* Ajusta el tamaño máximo del logo */
+    width: auto; 
 }
 
+.titulo h1 {
+    margin: 0;
+    font-size: 24px; /* Tamaño del título */
+    color: #333; /* Color del título */
+}
 
+.titulo p {
+    margin: 5px 0 0; /* Espaciado entre el título y el párrafo */
+    font-size: 16px; /* Tamaño del texto del párrafo */
+    color: #666; /* Color del texto del párrafo */
+} 
 h1 {
     font-size: 24px;
     color: #333;
@@ -47,7 +60,7 @@ h2 {
 }
 
 .main-content {
-    background-color: #67e5144f;
+    background-color: black;
     padding: 100px;
     text-align: center;
 }
@@ -101,7 +114,7 @@ h2 {
 }
 
 button {
-    background-color: #0f9fa8;
+    background-color: black;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -111,13 +124,13 @@ button {
 }
 
 button:hover {
-    background-color: #72d35f; 
+    background-color: gray; 
 }
 
 .tour-form {
     padding: 50px;
     text-align: center;
-    background-color: #d0f7b6;
+    background-color: #black;
 }
 
 form input,
@@ -129,7 +142,7 @@ form textarea {
 }
 
 form button {
-    background-color: #007bff;
+    background-color: black;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -160,7 +173,7 @@ footer {
 /*testimonios*/
 
 .testimonios {
-    background-color: #d0f7b6;
+    background-color: black;
     padding: 50px;
 }
 
@@ -241,12 +254,12 @@ footer {
     margin-bottom: 50px;
 }
 .accordion-button {
-    background-color: #007bff;
+    background-color: black;
     color: #fff;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #0056b3;
+    background-color: black;
 }
 
 .accordion-body {
@@ -256,7 +269,7 @@ footer {
 
 .testimonios,
 .faq-section {
-    color: #333;
+    color: #fff;
 }
 
 /*tours*/
@@ -453,7 +466,7 @@ footer {
 }
 
 .section-form-reviews {
-    background-color: #d0f7b6;
+    background-color: black;
     padding: 5%;
 }
 
