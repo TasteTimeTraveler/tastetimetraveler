@@ -118,8 +118,8 @@ h2 {
     object-fit: cover;
 }
 .btn-vermas {
-    background: black;
-    color: #fff;
+    background-color: black !important;
+    color: #fff !important;
 }
 .video-control-btn {
     position: absolute;
