@@ -438,10 +438,12 @@ footer {
         display: block;
         padding: 15px 20px; /* Espaciado interno */
         margin: 5px 0; /* Separación entre enlaces */
+        text-align: left;
     }
 
     .menu.active {
         display: flex;
+        width: -webkit-fill-available;
     }
 
     .hamburger {
