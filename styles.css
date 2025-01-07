@@ -281,16 +281,16 @@ footer {
     margin-bottom: 50px;
 }
 .accordion-button {
-    background-color: black !important;
-    color: #fff !important;
+    background-color: #fff !important;
+    color: black !important;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: black;
+    background-color: #fff;
 }
 
 .accordion-body {
-    background-color: #fff;
+    background-color: black;
     color: #333;
 }
 
@@ -449,7 +449,7 @@ footer {
         width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
         height: auto;
     }
-    
+
     .cards-tour {
         flex: 0 0 calc(100%);
     }
