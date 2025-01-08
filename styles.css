@@ -162,7 +162,7 @@ h2 {
 /* Estilo del botón de llamada a la acción */
 .cta-button {
     padding: 15px 30px;
-    background-color: "#55a130d91";
+    background-color: #11a0a6;
     color: white;
     font-size: 18px;
     text-decoration: none;
@@ -171,7 +171,7 @@ h2 {
 }
 
 .cta-button:hover {
-    background-color: #ff3e2d;
+    background-color: #5ac43de0;
 }
 
 
