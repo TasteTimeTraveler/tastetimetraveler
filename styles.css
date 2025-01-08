@@ -242,6 +242,35 @@ footer {
     border: none;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.1s ease-in-out;
+    flex: 0 0 80%; /* Cada tarjeta ocupa el 80% del ancho del contenedor */
+    scroll-snap-align: center; /* Alinea las tarjetas al centro al desplazarse */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Contenedor principal */
+.tour-carousel {
+    display: flex;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Desplazamiento suave entre elementos */
+    gap: 16px;
+    padding: 16px 0;
+}
+
+/* Estilo de las tarjetas */
+.cards-wrapper {
+    display: flex;
+    gap: 16px; /* Espaciado entre tarjetas */
+}
+
+/* Ocultar barra de desplazamiento en dispositivos móviles */
+.tour-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.tour-carousel {
+    -ms-overflow-style: none; /* Para IE y Edge */
+    scrollbar-width: none; /* Para Firefox */
 }
 
 .card:hover {
@@ -401,8 +430,12 @@ footer {
         height: auto;
     }
 
-    .cards-tour {
-        flex: 0 0 calc(100% / 2);
+    .card {
+        flex: 0 0 calc(33.333% - 16px); /* Regresa al diseño de grilla en pantallas grandes */
+    }
+    .tour-carousel {
+        overflow-x: visible; /* Quita el carrusel en pantallas grandes */
+        scroll-snap-type: none;
     }
 
     .menu {
