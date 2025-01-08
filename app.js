@@ -14,27 +14,6 @@ document.addEventListener('click', (event) => {
   }
 });
 
-
-// Cargar íconos en la barra de desplazamiento
-        if (scrollbarIconsContainer) {
-            const monumentIcons = [
-                './assets/monumentos/catedral-de-morelia.png',
-                './assets/monumentos/independencia.png',
-                './assets/monumentos/kiosko.png',
-                './assets/monumentos/capilla.png',
-                './assets/monumentos/palacio.png',
-                './assets/monumentos/iglesia.png'
-            ];
-    
-            monumentIcons.forEach(icon => {
-                const img = document.createElement('img');
-                img.classList.add("mini-icono");
-                img.src = icon;
-                scrollbarIconsContainer.appendChild(img);
-            });
-        }
-    
-
 //carousel
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.tour-carousel');
