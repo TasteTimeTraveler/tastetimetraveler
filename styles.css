@@ -310,11 +310,7 @@ h2 {
         overflow-x: scroll; /* Quita el carrusel en pantallas grandes */
         -webkit-overflow-scrolling: touch;
     }
-    
-    .prev-btn, .next-btn {
-        display: block;
-    }
-    
+
     .menu {
         display: none;
         flex-direction: column;
