@@ -159,6 +159,10 @@ h2 {
     color: white;
 }
 
+.title-hero{
+    font-size: 3.5rem;
+}
+
 /* Estilo del botón de llamada a la acción */
 .cta-button {
     padding: 15px 30px;
