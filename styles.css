@@ -113,7 +113,9 @@ h2 {
 
 
 /*imagen inicial*/
-
+.container-img-home{
+    padding: 0;
+}
 .image-container {
     position: relative;
     width: 100%;
