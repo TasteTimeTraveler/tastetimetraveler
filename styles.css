@@ -139,7 +139,6 @@ h2 {
 
 
 /*texto about*/
-
 .main-content {
     background-color: black;
     padding: 100px;
@@ -202,7 +201,7 @@ h2 {
 }
 
 .h-100 {
-    height: 80%;
+    height: 70%;
 }
 
 .tour-img {
