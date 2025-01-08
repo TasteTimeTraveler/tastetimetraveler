@@ -5,6 +5,8 @@ const container = document.querySelector('.carousel-container-cards');
     const hamburger = document.querySelector('.hamburger');
     const menu = document.querySelector('.menu');
     const menuLinks = document.querySelectorAll('.menu li a');
+    const toggleButton = document.querySelector('.navbar-toggler');
+const despliegue = document.getElementById('navbarNav');
 
 const overlay = document.getElementById('video-overlay');
 const videoControl = document.getElementById('video-control');
@@ -185,4 +187,31 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.classList.remove('active');
             hamburger.classList.remove('open');
         });
+    });
+
+    function closeMenu() {
+        menu.classList.remove('show');
+        toggleButton.setAttribute('aria-expanded', 'false');
+        toggleButton.classList.add('collapsed');
+    }
+    
+    // Detectar clics fuera del menú
+    document.addEventListener('click', function (event) {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickOnToggleButton = toggleButton.contains(event.target);
+    
+        if (!isClickInsideMenu && !isClickOnToggleButton && menu.classList.contains('show')) {
+            closeMenu();
+        }
+    });
+    
+    // Alternar el menú al hacer clic en el botón
+    toggleButton.addEventListener('click', function () {
+        if (despliegue.classList.contains('show')) {
+            closeMenu();
+        } else {
+            despliegue.classList.add('show');
+            toggleButton.setAttribute('aria-expanded', 'true');
+            toggleButton.classList.remove('collapsed');
+        }
     });
