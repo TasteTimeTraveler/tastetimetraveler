@@ -250,9 +250,11 @@ h2 {
 }
 
 .disabled-link {
-    pointer-events: none; /* Desactiva la capacidad de hacer clic */
-    color: gray; /* Cambia el color para dar la apariencia de deshabilitado */
+    pointer-events: none; /* Desactiva la capacidad de hacer clic *//* Cambia el color para dar la apariencia de deshabilitado */
     text-decoration: none; /* Opcional: quita el subrayado */
+    background-color: gray !important;
+    color: #fff !important;
+    margin-top: auto; 
   }
 
 /* Ocultar barra de desplazamiento en dispositivos móviles */
