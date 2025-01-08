@@ -295,7 +295,7 @@ h2 {
 }
 
 .btn-vermas:hover {
-    background-color: #5ac43de0;
+    background-color: #5ac43de0 !important;
 }
 
 .disabled-link {
