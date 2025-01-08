@@ -146,6 +146,26 @@ h2 {
 
 
 /*experiencias carousel*/
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: black;
+}
+
 .tour-carousel {
     display: flex;
     overflow-x: scroll; /* Habilita el desplazamiento horizontal */
@@ -155,6 +175,7 @@ h2 {
     padding: 16px 0;
     -ms-overflow-style: none; /* Para IE y Edge */
     scrollbar-width: none; /* Para Firefox */
+    position: relative;
 }
 
 .tour-carousel .col-12 {
@@ -232,6 +253,8 @@ h2 {
 .tour-carousel::-webkit-scrollbar {
     display: none;
 }
+
+
 
 
 /*faq section*/
