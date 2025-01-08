@@ -24,6 +24,36 @@ header {
     padding: 0 20px;
 }
 
+button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 20px; 
+    margin-bottom: 15px; 
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -36,7 +66,6 @@ header {
     width: auto;
     border-radius: 50%;
     margin-left: 10px;
-
 }
 
 .menu {
@@ -57,9 +86,6 @@ header {
     padding: 10px 15px;
 }
 
-.menu li a:hover {
-    color: gray;
-}
 
 /* Hamburger Menu */
 .hamburger {
@@ -84,33 +110,20 @@ header {
     background-color: black;
 }
 
-h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-    border-radius: 2px;
-}
 
-h2 {
-    font-size: 20px; 
-    margin-bottom: 15px; 
-}
 
-.image-overlay {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor sin distorsionarse */
-    object-position: center; /* Centra la imagen dentro del contenedor */
-    display: block;
-}
+/*imagen inicial*/
 
-/* Ajustes para el contenedor de imagen */
+/* contenedor de imagen */
+
 .image-container {
     position: relative;
     width: 100%;
     height: 100vh; /* Ocupa la altura total de la ventana */
     overflow: hidden;
 }
+
+/*texto about*/
 
 .main-content {
     background-color: black;
@@ -123,173 +136,65 @@ h2 {
     margin-top: 5rem;
 }
 
-.overlay-text h1 {
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    margin: 0;
-}
 
 
-
-
-.btn-vermas {
-    background-color: black !important;
-    color: #fff !important;
-}
-
-
-#button-contactus{
-    color: #e9ecef;
-}
-
-button {
-    background-color: black;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: gray; 
-}
-
-.tour-form {
-    padding: 50px;
-    text-align: center;
-    background-color: black;
-}
-
-form input,
-form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-form button {
-    background-color: black;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-.redes-sociales {
-    display: flex;
-    justify-content: center;
-}
-
-.redes-sociales a {
-    margin: 0 10px; 
-}
-
-.redes-sociales img {
-    width: 30px; 
-}
-
-/*testimonios*/
-
-.testimonios {
-    background-color: black;
-    padding: 50px;
-}
-
-.container-testimonios h2{
-    text-align: center;
-    padding-top: 40px;
-}
-
-.container-card-testimonio{
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    align-items: stretch;
-}
-
-.card-testimonio{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card-imagen{
-    height: 5rem;
-    width: 5rem;
-}
-
-.card-imagen img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center; 
-    border-radius: 50%;
-}
-
-.card {
-    border: none;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.1s ease-in-out;
-    flex: 0 0 80%; /* Cada tarjeta ocupa el 80% del ancho del contenedor */
-    scroll-snap-align: center; /* Alinea las tarjetas al centro al desplazarse */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-/* Contenedor principal */
+/*experiencias carousel*/
 .tour-carousel {
     display: flex;
     overflow-x: auto; /* Habilita el desplazamiento horizontal */
     scroll-snap-type: x mandatory; /* Desplazamiento suave entre elementos */
     gap: 16px;
     padding: 16px 0;
+    -ms-overflow-style: none; /* Para IE y Edge */
+    scrollbar-width: none; /* Para Firefox */
 }
 
-/* Estilo de las tarjetas */
 .cards-wrapper {
     display: flex;
     gap: 16px; /* Espaciado entre tarjetas */
 }
 
-/* Ocultar barra de desplazamiento en dispositivos móviles */
-.tour-carousel::-webkit-scrollbar {
-    display: none;
+.card {
+    flex: 0 0 80%; /* Cada tarjeta ocupa el 80% del ancho del contenedor */
+    scroll-snap-align: center; /* Alinea las tarjetas al centro al desplazarse */
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
-.tour-carousel {
-    -ms-overflow-style: none; /* Para IE y Edge */
-    scrollbar-width: none; /* Para Firefox */
-}
-
-.card:hover {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-}
-
-.img-container {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.img-container img {
-    width: 100%;
+.h-100 {
     height: 100%;
-    object-fit: cover;
-    object-position: center; 
+}
+
+.tour-img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; 
+}
+
+.card-body{
+    box-shadow: none;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black !important;
+    display: flex;
+    align-items: center;
+}
+
+.card-title h5{
+    margin: 30px;
+}
+
+.tour-title {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto según sea necesario */
+    font-weight: bold; /* Establece un peso de fuente más pesado */
+    line-height: 1.3; /* Asegura un buen espaciado entre las líneas */
+    white-space: normal; /* Permite que el texto se ajuste en múltiples líneas */
+    word-wrap: break-word; /* Asegura que las palabras largas se dividan si es necesario */
+    margin-bottom: 10px; /* Ajusta el espacio entre el título y el resto del contenido */
 }
 
 .card-text {
@@ -298,9 +203,19 @@ footer {
     padding-top: 1rem;
 }
 
-.card-body{
-    box-shadow: none;
+.btn-vermas {
+    background-color: black !important;
+    color: #fff !important;
 }
+
+
+/* Ocultar barra de desplazamiento en dispositivos móviles */
+.tour-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*faq section*/
 
 .faq-section {
     background-color: black;
@@ -327,128 +242,29 @@ footer {
     color: #333;
 }
 
-.testimonios,
-.faq-section {
-    color: black;
-}
 
-/*tours*/
 
-.carousel-item img {
-    height: 550px; 
-    object-fit: cover; 
-    object-position: center; 
-    padding: 40px;
-}
+/*footer*/
 
-.slide-title{
-    align-items: center;
-}
-
-.title-tours{
+.redes-sociales {
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
-
 }
 
-.tours-section {
-    text-align: center;
-    padding: 50px 0; 
+.redes-sociales a {
+    margin: 0 10px; 
 }
 
-.tour-card:hover {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+.redes-sociales img {
+    width: 30px; 
 }
 
-
-.tour-img {
-    width: 100%;
-    height: 200px; /* Ajusta la altura según sea necesario */
-    object-fit: cover; 
-}
-
-.tour-card-body {
-    padding: 1rem; /* Ajusta el relleno según sea necesario */
-    height: 100%; /* Asegura que el contenido dentro de la tarjeta ocupe todo el espacio disponible */
-    display: flex;
-    flex-direction: column; /* Esto permite que los elementos dentro del cuerpo de la tarjeta se organicen verticalmente */
-    justify-content: space-between; /* Esto distribuye el contenido de forma equilibrada */
-}
-
-.tour-title {
-    font-size: 1.2rem; /* Ajusta el tamaño del texto según sea necesario */
-    font-weight: bold; /* Establece un peso de fuente más pesado */
-    line-height: 1.3; /* Asegura un buen espaciado entre las líneas */
-    white-space: normal; /* Permite que el texto se ajuste en múltiples líneas */
-    word-wrap: break-word; /* Asegura que las palabras largas se dividan si es necesario */
-    margin-bottom: 10px; /* Ajusta el espacio entre el título y el resto del contenido */
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd; /* Opcional: Añade un borde ligero */
-    border-radius: 5px; /* Opcional: Bordes redondeados */
-    overflow: hidden; 
-}
-
-.h-100 {
-    height: 100%;
-}
-.card-title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: black !important;
-    display: flex;
-    align-items: center;
-}
-
-.card-title h5{
-    margin: 30px;
-}
-
-.carousel-container-cards {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden; 
-    white-space: nowrap; 
-}
-
-.cards-tour {
-    flex: 0 0 calc(100% / 3); 
-    margin: 5px;
-    padding: 5px;
-    height: 500px;
-}
 
 @media (max-width: 768px) {
 
-    .image-overlay {
-        width: 100%; /* Se asegura de que ocupe todo el ancho en pantallas medianas */
-        height: auto;
-    }
-
-    .card {
-        flex: 0 0 calc(33.333% - 16px); /* Regresa al diseño de grilla en pantallas grandes */
-    }
     .tour-carousel {
         overflow-x: visible; /* Quita el carrusel en pantallas grandes */
         scroll-snap-type: none;
-    }
-
-    .carousel-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        cursor: pointer;
-        z-index: 10;
-        border-radius: 50%;
     }
     
     .prev-btn {
@@ -499,14 +315,6 @@ footer {
 
 @media (max-width: 480px) {
 
-    .image-overlay {
-        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
-        height: auto;
-    }
-
-    .cards-tour {
-        flex: 0 0 calc(100%);
-    }
 
     .main-content {
 
@@ -514,87 +322,14 @@ footer {
 
     }
 
-}
+    .tour-carousel {
+        overflow-x: visible; /* Quita el carrusel en pantallas grandes */
+        scroll-snap-type: none;
+    }
 
-/* Estilos para la barra de desplazamiento personalizada */
-.section-carrusel-2{
-    margin-top: 50px;
-    scrollbar-width: none;
-}
-.section-carrusel-2::-webkit-scrollbar {
-    width: 10px; 
-}
-
-.section-carrusel-2::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
-
-.section-carrusel-2::-webkit-scrollbar-thumb {
-    background: #888; 
-    border-radius: 5px; 
-}
-
-.section-carrusel-2::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
-
-.mini-icono{
-    width: 5%;
-    height: 5%;
 }
 
 
-/*reviews*/
-
-.customer-reviews {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.review-card {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 10px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.review-content p {
-    font-size: 16px; 
-    margin-bottom: 10px; 
-}
-
-.review-author {
-    display: flex;
-    align-items: center;
-}
-
-.review-author img {
-    width: 40px; 
-    height: 40px; 
-    border-radius: 50%;
-    margin-right: 10px; 
-}
-
-.author-info h6 {
-    margin: 0;
-}
-
-.author-info p {
-    margin: 0;
-    color: #888;
-    font-style: italic;
-}
-
-.section-form-reviews {
-    background-color: black;
-    padding: 5%;
-}
 
 /*contacto*/
 .contact-section {

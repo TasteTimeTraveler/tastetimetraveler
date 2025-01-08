@@ -1,74 +1,4 @@
 
-
-    /*const hamburger = document.querySelector('.hamburger');
-    const menu = document.querySelector('.menu');
-    const menuLinks = document.querySelectorAll('.menu li a');
-    const toggleButton = document.querySelector('.navbar-toggler');
-    const despliegue = document.getElementById('navbarNav');
-
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const scrollbarIconsContainer = document.querySelector('.scrollbar-icons');
-        if (scrollbarIconsContainer) {
-            const monumentIcons = [
-                './assets/monumentos/catedral-de-morelia.png',
-                './assets/monumentos/independencia.png',
-                './assets/monumentos/kiosko.png',
-                './assets/monumentos/capilla.png',
-                './assets/monumentos/palacio.png',
-                './assets/monumentos/iglesia.png'
-            ];
-            
-            monumentIcons.forEach(icon => {
-                const img = document.createElement('img');
-                img.classList.add("mini-icono");
-                img.src = icon;
-                scrollbarIconsContainer.appendChild(img);
-            });
-        }
-    });
-
-    hamburger.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        hamburger.classList.toggle('open');
-    });
-    
-    // Función para cerrar el menú al hacer clic en un enlace
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('active');
-            hamburger.classList.remove('open');
-        });
-    });
-
-    function closeMenu() {
-        menu.classList.remove('show');
-        toggleButton.setAttribute('aria-expanded', 'false');
-        toggleButton.classList.add('collapsed');
-    }
-    
-    // Detectar clics fuera del menú
-    document.addEventListener('click', function (event) {
-        const isClickInsideMenu = menu.contains(event.target);
-        const isClickOnToggleButton = toggleButton.contains(event.target);
-    
-        if (!isClickInsideMenu && !isClickOnToggleButton && menu.classList.contains('show')) {
-            closeMenu();
-        }
-    });
-    
-    // Alternar el menú al hacer clic en el botón
-    toggleButton.addEventListener('click', function () {
-        if (despliegue.classList.contains('show')) {
-            closeMenu();
-        } else {
-            despliegue.classList.add('show');
-            toggleButton.setAttribute('aria-expanded', 'true');
-            toggleButton.classList.remove('collapsed');
-        }
-    });*/
-
-
     document.addEventListener('DOMContentLoaded', function () {
         const hamburger = document.querySelector('.hamburger');
         const menu = document.querySelector('.menu');
@@ -155,7 +85,7 @@
         }
     });
     
-
+//carousel
     document.addEventListener('DOMContentLoaded', function () {
         const carousel = document.querySelector('.tour-carousel');
         const scrollAmount = 300; // Cantidad de desplazamiento
