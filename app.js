@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//menu hamburguesa
+/*/menu hamburguesa
 // Obtener los elementos del menú y del icono
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
@@ -37,4 +37,4 @@ document.addEventListener('click', (event) => {
   if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
     menu.classList.remove('open');
   }
-});
+});*/
