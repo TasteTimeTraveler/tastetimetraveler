@@ -176,12 +176,12 @@ h2 {
     -ms-overflow-style: none; /* Para IE y Edge */
     scrollbar-width: none; /* Para Firefox */
     position: relative;
+    height: 460px;
 }
 
 .tour-carousel .col-12 {
     scroll-snap-align: start;
     flex: 0 0 auto;
-    height: 460px;
 }
 
 .cards-wrapper {
