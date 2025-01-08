@@ -177,6 +177,7 @@ h2 {
 .tour-carousel .col-12 {
     scroll-snap-align: start;
     flex: 0 0 auto;
+    height: 460px;
 }
 
 .cards-wrapper {
