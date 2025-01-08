@@ -137,7 +137,7 @@ h2 {
 /* Hero content (texto sobre la imagen) */
 .hero-content {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -365,6 +365,7 @@ h2 {
 
     .title-hero{
         font-weight: 400;
+        top: 40%;
     }
 
     .tour-carousel {
