@@ -175,7 +175,7 @@ h2 {
 }
 
 .cta-button:hover {
-    background-color: #089bac;
+    background: linear-gradient(45deg, #0000ff, #00ff00); 
 }
 
 
