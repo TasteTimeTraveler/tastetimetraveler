@@ -99,5 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
             carousel.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
         });
     });
+    // Llamar a updateActiveDot al cargar la página para asegurarse de que el primer punto esté activo
+    updateActiveDot();
 });
 
