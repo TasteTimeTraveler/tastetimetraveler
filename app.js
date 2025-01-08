@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('DOMContentLoaded', function() {
         const reviewsContainer = document.querySelector('.reviews-container');
     
-        // Función para guardar las reseñas en el localStorage
+        /*/ Función para guardar las reseñas en el localStorage
         function saveReviews() {
             const reviews = Array.from(reviewsContainer.children).map(review => {
                 return {
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
     video.addEventListener("ended", function() {
         controlButton.style.display = 'none';
         
-    });
+    });*/
 
 
     hamburger.addEventListener('click', () => {
