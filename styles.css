@@ -249,6 +249,12 @@ h2 {
     margin-top: auto; 
 }
 
+.disabled-link {
+    pointer-events: none; /* Desactiva la capacidad de hacer clic */
+    color: gray; /* Cambia el color para dar la apariencia de deshabilitado */
+    text-decoration: none; /* Opcional: quita el subrayado */
+  }
+
 /* Ocultar barra de desplazamiento en dispositivos móviles */
 .tour-carousel::-webkit-scrollbar {
     display: none;
