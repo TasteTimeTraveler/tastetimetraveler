@@ -1,19 +1,3 @@
-// Obtener los elementos del menú y del icono
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-
-// Agregar el evento de clic para abrir y cerrar el menú
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('open');
-});
-
-// Cerrar el menú si se hace clic fuera de él
-document.addEventListener('click', (event) => {
-  if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-    menu.classList.remove('open');
-  }
-});
-
 //carousel
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.tour-carousel');
@@ -36,4 +20,21 @@ document.addEventListener('DOMContentLoaded', function () {
             startX = moveX; // Actualiza la posición inicial para el siguiente movimiento
         }
     });
+});
+
+//menu hamburguesa
+// Obtener los elementos del menú y del icono
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+// Agregar el evento de clic para abrir y cerrar el menú
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+
+// Cerrar el menú si se hace clic fuera de él
+document.addEventListener('click', (event) => {
+  if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+    menu.classList.remove('open');
+  }
 });
