@@ -116,6 +116,7 @@ h2 {
 }
 .container-img-home {
     padding: 0;
+    position: absolute;
 }
 
 .image-container {
