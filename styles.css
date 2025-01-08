@@ -137,11 +137,18 @@ h2 {
 /* Hero content (texto sobre la imagen) */
 .hero-content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+}
+
+.title-hero{
+    font-size: 3.5rem;
+    color: #f8f9fa;
+    font-weight: 400;
+    margin-bottom: 150px;
 }
 
 /* Estilo del botón de llamada a la acción */
@@ -174,9 +181,7 @@ h2 {
     background: linear-gradient(90deg, #11a0a7, #73d35e); 
 }
 
-.title-hero{
-    font-size: 3.5rem;
-}
+
 
 
 
