@@ -1,5 +1,6 @@
 
     document.addEventListener('DOMContentLoaded', function () {
+
         const hamburger = document.querySelector('.hamburger');
         const menu = document.querySelector('.menu');
         const menuLinks = document.querySelectorAll('.menu li a');
@@ -20,6 +21,7 @@
                 hamburger.classList.remove('open');
             }
         }
+
         // Manejar el clic en el botón hamburguesa
         if (hamburger && menu) {
             hamburger.addEventListener('click', () => {
@@ -33,9 +35,7 @@
                 });
             });
         }
-    
-        
-    
+
     // Detectar clics fuera del menú para cerrarlo
     document.addEventListener('click', function (event) {
         const isClickInsideMenu = menu && menu.contains(event.target);
@@ -99,7 +99,8 @@ document.addEventListener('DOMContentLoaded', function () {
             carousel.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
         });
     });
+
     // Llamar a updateActiveDot al cargar la página para asegurarse de que el primer punto esté activo
     updateActiveDot();
-});
 
+});
