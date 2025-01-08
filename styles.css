@@ -289,6 +289,10 @@ h2 {
     margin-top: auto; 
 }
 
+.btn-vermas:hover {
+    background-color: #5ac43de0;
+}
+
 .disabled-link {
     pointer-events: none; /* Desactiva la capacidad de hacer clic *//* Cambia el color para dar la apariencia de deshabilitado */
     text-decoration: none; /* Opcional: quita el subrayado */
