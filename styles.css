@@ -147,7 +147,7 @@ h2 {
 .title-hero{
     font-size: 3.5rem;
     color: #f8f9fa;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 150px;
 }
 
@@ -362,6 +362,10 @@ h2 {
 
 
 @media (max-width: 768px) {
+
+    .title-hero{
+        font-weight: 400;
+    }
 
     .tour-carousel {
         overflow-x: scroll; /* Quita el carrusel en pantallas grandes */
