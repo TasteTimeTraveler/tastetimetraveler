@@ -148,7 +148,7 @@ h2 {
 /*experiencias carousel*/
 .tour-carousel {
     display: flex;
-    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    overflow-x: scroll; /* Habilita el desplazamiento horizontal */
     scroll-snap-type: x mandatory; /* Desplazamiento suave entre elementos */
     -webkit-overflow-scrolling: touch;
     gap: 16px;
@@ -330,7 +330,7 @@ h2 {
     }
 
     .tour-carousel {
-        overflow-x: visible; /* Quita el carrusel en pantallas grandes */
+        overflow-x: scroll; /* Quita el carrusel en pantallas grandes */
         scroll-snap-type: none;
     }
 
