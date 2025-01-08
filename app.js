@@ -91,25 +91,4 @@
     document.addEventListener('DOMContentLoaded', function () {
         const carousel = document.querySelector('.tour-carousel');
         const scrollAmount = 300; // Cantidad de desplazamiento
-    
-        // Botones para el desplazamiento
-        const prevButton = document.createElement('button');
-        const nextButton = document.createElement('button');
-        prevButton.innerHTML = '←';
-        nextButton.innerHTML = '→';
-        prevButton.classList.add('carousel-btn', 'prev-btn');
-        nextButton.classList.add('carousel-btn', 'next-btn');
-    
-        // Añadir botones al DOM
-        carousel.parentElement.appendChild(prevButton);
-        carousel.parentElement.appendChild(nextButton);
-    
-        // Eventos de clic para los botones
-        prevButton.addEventListener('click', () => {
-            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-    
-        nextButton.addEventListener('click', () => {
-            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        });
     });
