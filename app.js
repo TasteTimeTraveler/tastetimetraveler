@@ -87,8 +87,25 @@
     
 
 //carousel
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.tour-carousel');
+    let startX;
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const carousel = document.querySelector('.tour-carousel');
-        const scrollAmount = 300; // Cantidad de desplazamiento
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX; // Captura la posición inicial del toque
     });
+
+    carousel.addEventListener('touchmove', (e) => {
+        const moveX = e.touches[0].clientX; // Captura la posición del toque mientras se mueve
+        const diffX = startX - moveX; // Diferencia de la posición
+
+        if (Math.abs(diffX) > 50) { // Si el movimiento es suficiente
+            if (diffX > 0) {
+                carousel.scrollBy({ left: 300, behavior: 'smooth' }); // Desplazamiento hacia la derecha
+            } else {
+                carousel.scrollBy({ left: -300, behavior: 'smooth' }); // Desplazamiento hacia la izquierda
+            }
+            startX = moveX; // Actualiza la posición inicial para el siguiente movimiento
+        }
+    });
+});
