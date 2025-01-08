@@ -110,6 +110,10 @@ h2 {
 }
 
 /*imagen inicial*/
+
+#home{
+    height: 460px;
+}
 .container-img-home {
     padding: 0;
 }
