@@ -85,7 +85,9 @@
         }
     });
     
+
 //carousel
+
     document.addEventListener('DOMContentLoaded', function () {
         const carousel = document.querySelector('.tour-carousel');
         const scrollAmount = 300; // Cantidad de desplazamiento
