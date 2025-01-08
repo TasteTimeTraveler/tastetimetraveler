@@ -125,7 +125,7 @@ h2 {
 .image-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden; /* Evita que la imagen desborde el contenedor */
 }
 
