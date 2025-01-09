@@ -165,20 +165,7 @@ h2 {
     margin-bottom: 150px;
 }
 
-/* Estilo del botón de llamada a la acción */
-.cta-button {
-    padding: 15px 30px;
-    background-color: #ff6f61;
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
 
-.cta-button:hover {
-    background-color: #ff3e2d;
-}
 
 /* Estilo del botón de llamada a la acción */
 .cta-button {
@@ -194,9 +181,6 @@ h2 {
 .cta-button:hover {
     background: linear-gradient(90deg, #11a0a7, #73d35e); 
 }
-
-
-
 
 
 /*texto about*/
@@ -245,19 +229,9 @@ h2 {
     flex: 0 0 auto;
 }
 
-/* Ocultar barra de desplazamiento en dispositivos móviles */
-.tour-carousel::-webkit-scrollbar {
-    display: none;
-}
-
 .cards-wrapper {
     display: flex;
     gap: 16px; /* Espaciado entre tarjetas */
-}
-
-.tour-carousel .col-12 {
-    flex: 0 0 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    scroll-snap-align: center; /* Centra la tarjeta al deslizar */
 }
 
 .card {
@@ -333,7 +307,10 @@ h2 {
     margin-top: auto; 
   }
 
-
+/* Ocultar barra de desplazamiento en dispositivos móviles */
+.tour-carousel::-webkit-scrollbar {
+    display: none;
+}
 
 /*faq section*/
 .faq-section {
@@ -389,14 +366,6 @@ h2 {
     .tour-carousel {
         overflow-x: scroll; /* Quita el carrusel en pantallas grandes */
         -webkit-overflow-scrolling: touch;
-    }
-
-    .tour-carousel .col-12 {
-        flex: 0 0 80%; /* Ajusta el tamaño en pantallas medianas */
-    }
-    .card {
-        border: 1px solid #ddd;
-        border-radius: 8px;
     }
 
     .menu {
