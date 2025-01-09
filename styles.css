@@ -96,7 +96,7 @@ h2 {
     background-clip: text;
     -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
     -webkit-text-fill-color: transparent; /* Propiedad estándar para WebKit */
-    transition: background-position 0.5s, color 0.3s;
+    transition: background-position 1s, color 1s;
 }
 
 
@@ -225,6 +225,8 @@ h2 {
 .cards-wrapper {
     display: flex;
     gap: 16px; /* Espaciado entre tarjetas */
+    max-width: 100%;
+    flex: 0 0 auto;
 }
 
 .card {
