@@ -80,22 +80,23 @@ h2 {
 .menu li a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
     font-size: 16px;
-   /* transition: color 0.3s;*/
+   transition: color 0.3s;
     padding: 10px 15px;
-    /*estilos agregados*/
-    background: linear-gradient(to right, #11a0a7, #73d35e);
-    background-size: 200%;
-    background-position: 0 50%;
-    background-clip: text; /* Propiedad estándar */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: background-position 0.5s, color 0.3s;
+    position: relative;
 }
 
 /* Hover effect: Descubre el gradiente */
 .menu li a:hover {
-    background-position: 100% 50%; /* Desplaza el gradiente a la derecha */
+    color: transparent; /* El texto desaparece para mostrar el gradiente */
+    background: linear-gradient(to right, #11a0a7, #73d35e);
+    background-size: 200%;
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+    -webkit-text-fill-color: transparent; /* Propiedad estándar para WebKit */
+    transition: background-position 0.5s, color 0.3s;
 }
 
 
@@ -375,17 +376,6 @@ h2 {
 
 
 @media (max-width: 768px) {
-
-    /* Gradiente solo para el menú en versión móvil */
-.hamburger.open + .menu {
-    background: linear-gradient(to right, #11a0a7, #73d35e);
-    background-clip: text; /* Propiedad estándar */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
     .title-hero{
         font-weight: 400;
