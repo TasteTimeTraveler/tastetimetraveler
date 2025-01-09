@@ -49,7 +49,7 @@
 });
     
 
-/*/carousel
+//carousel
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.tour-carousel');
     const dots = document.querySelectorAll('.dot');
@@ -111,61 +111,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Llamar a updateActiveDot al cargar la página para asegurarse de que el primer punto esté activo
     updateActiveDot();
 });
-});*/
-
-document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('.tour-carousel');
-    const dots = document.querySelectorAll('.dot');
-    const cards = document.querySelectorAll('.col-12');
-    
-    let startX;
-
-    // Obtener el ancho de la tarjeta
-    const cardWidth = cards[0].offsetWidth + 16; // Ancho de las tarjetas + margen (si lo tienes)
-
-    carousel.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    carousel.addEventListener('touchmove', (e) => {
-        const moveX = e.touches[0].clientX;
-        const diffX = startX - moveX;
-
-        if (Math.abs(diffX) > 50) {
-            if (diffX > 0) {
-                carousel.scrollBy({ left: cardWidth, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
-            } else {
-                carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
-            }
-            startX = moveX;
-        }
-    });
-
-    // Función para actualizar el punto activo
-    function updateActiveDot() {
-        const scrollPosition = carousel.scrollLeft;
-        const activeIndex = Math.round(scrollPosition / cardWidth);
-        
-        dots.forEach((dot, index) => {
-            dot.classList.remove('active');
-            if (index === activeIndex) {
-                dot.classList.add('active');
-            }
-        });
-    }
-
-    // Actualizar el punto activo cuando el carrusel se desplace
-    carousel.addEventListener('scroll', updateActiveDot);
-
-    // Hacer que los puntos sean clickeables
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            carousel.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
-        });
-    });
-
-    // Llamar a updateActiveDot al cargar la página para asegurarse de que el primer punto esté activo
-    updateActiveDot();
-
 });
-
