@@ -82,7 +82,7 @@ h2 {
     color: black;
     font-weight: bold;
     font-size: 16px;
-   transition: color 0.3s;
+    transition: color 0.3s;
     padding: 10px 15px;
     position: relative;
 }
@@ -122,13 +122,6 @@ h2 {
 .hamburger.open span {
     background-color: black;
 }
-
-/*imagen inicial*/
-
-#home {
-    height: auto; 
-}
-
 
 
 /* Hero section */
@@ -307,10 +300,6 @@ h2 {
     margin-top: auto; 
   }
 
-/* Ocultar barra de desplazamiento en dispositivos móviles */
-.tour-carousel::-webkit-scrollbar {
-    display: none;
-}
 
 /*faq section*/
 .faq-section {
@@ -367,6 +356,11 @@ h2 {
         overflow-x: scroll; /* Quita el carrusel en pantallas grandes */
         -webkit-overflow-scrolling: touch;
     }
+
+    /* Ocultar barra de desplazamiento en dispositivos móviles */
+.tour-carousel::-webkit-scrollbar {
+    display: none;
+}
 
     .menu {
         display: none;
