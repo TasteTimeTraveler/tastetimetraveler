@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.tour-carousel');
     const dots = document.querySelectorAll('.dot');
-    const cards = document.querySelectorAll('.tour-carousel .col-12');
+    const cards = document.querySelectorAll('.col-12');
     
     let startX;
 
