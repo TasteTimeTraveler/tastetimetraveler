@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (Math.abs(diffX) > 50) {
             if (diffX > 0) {
-                carousel.scrollBy({ left: cardWidth, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
+                carousel.scrollBy({ left: 30, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
             } else {
-                carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
+                carousel.scrollBy({ left: -30, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
             }
             startX = moveX;
         }
