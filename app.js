@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (Math.abs(diffX) > 50) {
             if (diffX > 0) {
-                carousel.scrollBy({ left: 300, behavior: 'smooth' });
+                carousel.scrollBy({ left: 200, behavior: 'smooth' });
             } else {
-                carousel.scrollBy({ left: -300, behavior: 'smooth' });
+                carousel.scrollBy({ left: -200, behavior: 'smooth' });
             }
             startX = moveX;
         }
