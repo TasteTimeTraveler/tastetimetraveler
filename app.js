@@ -53,12 +53,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.tour-carousel');
     const dots = document.querySelectorAll('.dot');
-    const cards = document.querySelectorAll('.tour-carousel .col-12');
+    const cards = document.querySelectorAll('col-12');
     
     let startX;
 
     // Obtener el ancho de la tarjeta
-    const cardWidth = cards[0].offsetWidth + 16; // Ancho de las tarjetas + margen (si lo tienes)
+    const cardWidth = cards[0].offsetWidth + 16; // Ancho de las tarjetas + margen 
 
     carousel.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX; 
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (Math.abs(diffX) > 50) {
             if (diffX > 0) {
-                carousel.scrollBy({ left: 50, behavior: 'smooth' });
+                carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
             } else {
-                carousel.scrollBy({ left: -50, behavior: 'smooth' });
+                carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
             }
             startX = moveX;
         }
