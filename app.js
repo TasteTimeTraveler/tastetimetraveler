@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hacer que los puntos sean clickeables
     dots2.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            carousel.scrollTo({ left: cardWidth2 * index, behavior: 'smooth' });
+            carousel2.scrollTo({ left: cardWidth2 * index, behavior: 'smooth' });
         });
     });
 
