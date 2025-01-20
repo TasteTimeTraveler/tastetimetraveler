@@ -108,39 +108,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //carousel2
 document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('.tour-carousel-2');
-    const dots = document.querySelectorAll('.dot2');
-    const cards = document.querySelectorAll('.tour-carousel-2 .col-12');
+    const carousel2 = document.querySelector('.tour-carousel-2');
+    const dots2 = document.querySelectorAll('.dot2');
+    const cards2 = document.querySelectorAll('.tour-carousel-2 .col-12');
     
-    let startX;
+    let startX2;
 
     // Obtener el ancho de la tarjeta
-    const cardWidth = cards[0].offsetWidth + 16; // Ancho de las tarjetas + margen (si lo tienes)
+    const cardWidth2 = cards2[0].offsetWidth + 16; // Ancho de las tarjetas + margen (si lo tienes)
 
-    carousel.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
+    carousel2.addEventListener('touchstart', (e) => {
+        startX2 = e.touches[0].clientX;
     });
 
-    carousel.addEventListener('touchmove', (e) => {
+    carousel2.addEventListener('touchmove', (e) => {
         const moveX = e.touches[0].clientX;
         const diffX = startX - moveX;
 
         if (Math.abs(diffX) > 50) {
             if (diffX > 0) {
-                carousel.scrollBy({ left: 30, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
+                carousel2.scrollBy({ left: 30, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
             } else {
-                carousel.scrollBy({ left: -30, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
+                carousel2.scrollBy({ left: -30, behavior: 'smooth' }); // Desplazar al tamaño de la tarjeta
             }
-            startX = moveX;
+            startX2 = moveX;
         }
     });
 
     // Función para actualizar el punto activo
-    function updateActiveDot() {
-        const scrollPosition = carousel.scrollLeft;
-        const activeIndex = Math.round(scrollPosition / cardWidth);
+    function updateActiveDot2() {
+        const scrollPosition = carousel2.scrollLeft;
+        const activeIndex = Math.round(scrollPosition / cardWidth2);
         
-        dots.forEach((dot, index) => {
+        dots2.forEach((dot, index) => {
             dot.classList.remove('active');
             if (index === activeIndex) {
                 dot.classList.add('active');
@@ -149,16 +149,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Actualizar el punto activo cuando el carrusel se desplace
-    carousel.addEventListener('scroll', updateActiveDot);
+    carousel2.addEventListener('scroll', updateActiveDot2);
 
     // Hacer que los puntos sean clickeables
-    dots.forEach((dot, index) => {
+    dots2.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            carousel.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
+            carousel.scrollTo({ left: cardWidth2 * index, behavior: 'smooth' });
         });
     });
 
     // Llamar a updateActiveDot al cargar la página para asegurarse de que el primer punto esté activo
-    updateActiveDot();
+    updateActiveDot2();
 
 });
