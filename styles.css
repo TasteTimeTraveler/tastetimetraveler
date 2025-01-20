@@ -192,6 +192,12 @@ h2 {
     gap: 10px;
 }
 
+.carousel-dots2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .dot {
     height: 10px;
     width: 10px;
@@ -201,7 +207,20 @@ h2 {
     cursor: pointer;
 }
 
+.dot2 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
 .dot.active {
+    background-color: black;
+}
+
+.dot2.active {
     background-color: black;
 }
 
@@ -217,7 +236,24 @@ h2 {
     position: relative;
 }
 
+.tour-carousel-2 {
+    display: flex;
+    overflow-x: scroll; /* Habilita el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Desplazamiento suave entre elementos */
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 16px 0;
+    -ms-overflow-style: none; /* Para IE y Edge */
+    scrollbar-width: none; /* Para Firefox */
+    position: relative;
+}
+
 .tour-carousel .col-12 {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
+
+.tour-carousel-2 .col-12 {
     scroll-snap-align: start;
     flex: 0 0 auto;
 }
