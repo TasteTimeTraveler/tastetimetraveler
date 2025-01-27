@@ -72,8 +72,7 @@
                         <div class="card-body tour-card-body">
                             <h5 class="card-title tour-title">Walking tour of the historic center of Mexico City</h5>
                             <p class="card-text">You will explore iconic landmarks, learn about the city's rich past and enjoy authentic flavors of Mexican cuisine. This immersive experience offers a unique insight into the heart of the city.</p>
-                            <a href="https://www.eventbrite.com/e/discover-the-history-and-flavors-of-mexico-city-tickets-1033921786897?aff=ebdsshcopyurl&utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp" class="btn btn-vermas">More Details</a>
-                        </div>
+                            <button class="btn btn-vermas" onclick="openModal('TourCentro.jpg', 'Walking tour of the historic center of Mexico City', 'You will explore iconic landmarks, learn about the city\'s rich past and enjoy authentic flavors of Mexican cuisine.')">More Details</button>                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
@@ -183,6 +182,15 @@
         </div>
     </div>
 </section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="Tour Image">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+    </div>
+</div>
 
         <section id="faq" class="faq-section">
             <div class="container">

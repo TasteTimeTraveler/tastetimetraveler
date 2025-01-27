@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     carousel2.addEventListener('touchmove', (e) => {
         const moveX = e.touches[0].clientX;
-        const diffX = startX - moveX;
+        const diffX = startX2 - moveX;
 
         if (Math.abs(diffX) > 50) {
             if (diffX > 0) {
@@ -162,3 +162,16 @@ document.addEventListener('DOMContentLoaded', function () {
     updateActiveDot2();
 
 });
+
+//modal
+
+function openModal(imageSrc, title, description) {
+    document.getElementById("modal-img").src = `./assets/galeria/${imageSrc}`;
+    document.getElementById("modal-title").textContent = title;
+    document.getElementById("modal-description").textContent = description;
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
