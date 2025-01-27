@@ -179,7 +179,7 @@ function openModal(imageSrc, title, text, bookNowLink) {
 
     modalImage.src = imageSrc;
     modalTitle.textContent = title;
-    modalText.textContent = text;
+    modalText.innerHTML = text;
     bookNowButton.href = bookNowLink;
 
     modal.style.display = "flex"; // Mostrar el modal
