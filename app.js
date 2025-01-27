@@ -165,13 +165,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //modal
 
-function openModal(imageSrc, title, description) {
-    document.getElementById("modal-img").src = `./assets/galeria/${imageSrc}`;
-    document.getElementById("modal-title").textContent = title;
-    document.getElementById("modal-description").textContent = description;
-    document.getElementById("modal").style.display = "flex";
+// Obtener elementos
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const modalContent = document.querySelector(".modal-content");
+
+// Abrir modal (debes conectar esta función a los eventos onclick de las tarjetas o imágenes)
+function openModal(imageSrc, title, text, bookNowLink) {
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalText = document.getElementById("modalText");
+    const bookNowButton = document.getElementById("bookNowButton");
+
+    modalImage.src = imageSrc;
+    modalTitle.textContent = title;
+    modalText.textContent = text;
+    bookNowButton.href = bookNowLink;
+
+    modal.style.display = "flex"; // Mostrar el modal
 }
 
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
+// Cerrar modal al hacer clic en el botón de cerrar
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Cerrar modal al hacer clic fuera del contenido
+modal.addEventListener("click", (event) => {
+    if (!modalContent.contains(event.target)) {
+        modal.style.display = "none";
+    }
+});
