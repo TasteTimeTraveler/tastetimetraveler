@@ -485,7 +485,7 @@ h2 {
     transform: scale(1.3);
 
 }
-/* Modal container */
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -497,12 +497,10 @@ h2 {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    overflow-y: auto; /* Permite scroll si el contenido es muy grande */
 }
 
-/* Modal content */
 .modal-content {
-    background-color: #ffffff;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
@@ -513,65 +511,66 @@ h2 {
     animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Close button */
-.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    background: none;
-    border: none;
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
 }
 
-/* Modal image */
+.modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
 .modal-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Modal title */
 .modal-title {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.5em;
     margin-bottom: 10px;
-    color: #222;
 }
 
-/* Modal text */
 .modal-text {
-    font-size: 1rem;
-    color: #555;
+    font-size: 1em;
+    color: #333;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* Primary button */
+.modal-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
 .btn-primary {
     background-color: #007bff;
-    color: #ffffff;
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: #0056b3;
 }
 
-/* Secondary action button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 .btn-book {
     display: inline-block;
     background-color: #ff7f50;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -584,7 +583,6 @@ h2 {
     background-color: #ff5733;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
