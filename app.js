@@ -200,8 +200,13 @@ function closeModal() {
 }
 
 // Cerrar modal al hacer clic fuera del contenido
-modal.addEventListener("click", (event) => {
-    if (!modalContent.contains(event.target)) {
-        modal.style.display = "none";
+document.addEventListener("click", (event) => {
+    const modal = document.getElementById("modal");
+    const modalContent = modal.querySelector(".modal-content");
+
+    // Verificar si el modal está visible y si el clic fue fuera del contenido
+    if (modal.style.display === "block" && !modalContent.contains(event.target)) {
+        closeModal();
     }
 });
+
