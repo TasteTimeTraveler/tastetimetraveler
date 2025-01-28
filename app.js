@@ -164,72 +164,39 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const toursContainer = document.querySelector(".cards-wrapper");
+// Guardar los datos globalmente
+let toursData = [];
 
-    // Cargar JSON dinámicamente
-    fetch("/tours.json")
-     console.log("estoy en fetch")
-        .then((response) => response.json())
-        .then((data) => {
-            data.forEach((tour) => {
-                // Crear cada tarjeta
-                console.log(data);
-                console.log(tour.id);
-                console.log(tour.image);
-                console.log(tour.title);
-                console.log(tour.description);
-                const card = document.createElement("div");
-                card.className = "col-12 col-md-4 mb-4";
-                card.innerHTML = `
-                    <div class="card h-100" data-id="${tour.id}">
-                        <img 
-                            src="${tour.image}" 
-                            class="tour-img" 
-                            alt="${tour.title}" 
-                            onclick="openModal(${tour.id}, '${tour.image}', '${tour.title}', \`${tour.details}\`, '${tour.link}')"
-                        >
-                        <div class="card-body tour-card-body">
-                            <h5 class="card-title tour-title">${tour.title}</h5>
-                            <p class="card-text">${tour.description}</p>
-                            <button 
-                                class="btn btn-vermas" 
-                                onclick="openModal(${tour.id}, '${tour.image}', '${tour.title}', \`${tour.details}\`, '${tour.link}')"
-                            >More Details</button>
-                        </div>
-                    </div>
-                `;
-                toursContainer.appendChild(card);
-            });
-        })
-        .catch((error) => console.error("Error loading JSON:", error));
-});
+// Cargar JSON y guardar datos globalmente
+fetch("/tours.json")
+    .then((response) => response.json())
+    .then((data) => {
+        toursData = data;
+    })
+    .catch((error) => console.error("Error loading JSON:", error));
 
 // Función para abrir el modal
-function openModal(id, image, title, details, link) {
-    const modal = document.getElementById("modal");
-    console.log(modal);
-    const modalContent = modal.querySelector(".modal-content");
+function openModal(tourId) {
+    // Buscar el tour correspondiente en los datos
+    const tour = toursData.find((item) => item.id === tourId);
 
-    modal.dataset.id = id; // Asigna el id al modal para referencia futura
-    modal.querySelector(".modal-img").src = image;
-    modal.querySelector(".modal-title").innerText = title;
-    modal.querySelector(".modal-details").innerHTML = details;
-    modal.querySelector(".modal-link").href = link;
-    modal.style.display = "block";
+    if (tour) {
+        // Actualizar contenido del modal
+        document.querySelector("#modal .modal-img").src = tour.image;
+        document.querySelector("#modal .modal-title").innerText = tour.title;
+        document.querySelector("#modal .modal-details").innerHTML = tour.details;
+        document.querySelector("#modal .modal-link").href = tour.link;
 
-    // Asegurar que el evento de clic fuera del contenido está configurado
-    modal.addEventListener("click", (event) => {
-        if (!modalContent.contains(event.target)) {
-            closeModal();
-        }
-    });
+        // Mostrar el modal
+        document.getElementById("modal").style.display = "block";
+    } else {
+        console.error("Tour not found:", tourId);
+    }
 }
 
 // Función para cerrar el modal
 function closeModal() {
-    const modal = document.getElementById("modal");
-    modal.style.display = "none";
+    document.getElementById("modal").style.display = "none";
 }
 
 // Cerrar modal al hacer clic fuera del contenido
