@@ -1,15 +1,15 @@
 [
     {
         "id": "tourCentro",
-        "image": "./assets/galeria/TourCentro.jpg",
+        "image": "/assets/galeria/TourCentro.jpg",
         "title": "Walking tour of the historic center of Mexico City",
         "details": "Itinerary:<br>- Área de chamanes<br>- Zona arqueológica del Templo Mayor (fuera del museo)<br>...",
         "description": "Explore iconic landmarks, learn about the city's rich past, and enjoy authentic Mexican cuisine.",
         "link": "https://www.eventbrite.com/e/walking-tour-of-the-historic-center-of-mexico-city-tickets-938938148277?aff=oddtdtcreator"
     },
     {
-        "id": 2,
-        "image": "./assets/galeria/basilica2.JPG",
+        "id": "tourBasilica",
+        "image": "/assets/galeria/basilica2.JPG",
         "title": "Know the Guadalupan Codex and the culture of this precinct",
         "details": "Discover the Basilica, a place of devotion, history, and culture...",
         "description": "One of the most visited pilgrimage centers in the world.",
