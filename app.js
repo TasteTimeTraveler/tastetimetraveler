@@ -163,32 +163,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-//modal
 
-// Obtener elementos
-const modal = document.getElementById("modal");
-const closeModal = document.getElementById("closeModal");
-const modalContent = document.querySelector(".modal-content");
+document.addEventListener("DOMContentLoaded", () => {
+    const toursContainer = document.querySelector(".cards-wrapper");
 
-// Abrir modal (debes conectar esta función a los eventos onclick de las tarjetas o imágenes)
-function openModal(imageSrc, title, text, bookNowLink) {
-    const modalImage = document.getElementById("modalImage");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalText = document.getElementById("modalText");
-    const bookNowButton = document.getElementById("bookNowButton");
+    // Cargar JSON dinámicamente
+    fetch("./tours.json")
+        .then((response) => response.json())
+        .then((data) => {
+            data.forEach((tour) => {
+                // Crear cada tarjeta
+                const card = document.createElement("div");
+                card.className = "col-12 col-md-4 mb-4";
+                card.innerHTML = `
+                    <div class="card h-100" data-id="${tour.id}">
+                        <img 
+                            src="${tour.image}" 
+                            class="tour-img" 
+                            alt="${tour.title}" 
+                            onclick="openModal(${tour.id}, '${tour.image}', '${tour.title}', \`${tour.details}\`, '${tour.link}')"
+                        >
+                        <div class="card-body tour-card-body">
+                            <h5 class="card-title tour-title">${tour.title}</h5>
+                            <p class="card-text">${tour.description}</p>
+                            <button 
+                                class="btn btn-vermas" 
+                                onclick="openModal(${tour.id}, '${tour.image}', '${tour.title}', \`${tour.details}\`, '${tour.link}')"
+                            >More Details</button>
+                        </div>
+                    </div>
+                `;
+                toursContainer.appendChild(card);
+            });
+        })
+        .catch((error) => console.error("Error loading JSON:", error));
+});
 
-    modalImage.src = imageSrc;
-    modalTitle.textContent = title;
-    modalText.innerHTML = text;
-    bookNowButton.href = bookNowLink;
+// Función para abrir el modal
+function openModal(id, image, title, details, link) {
+    const modal = document.getElementById("modal");
+    const modalContent = modal.querySelector(".modal-content");
 
-    modal.style.display = "flex"; // Mostrar el modal
+    modal.dataset.id = id; // Asigna el id al modal para referencia futura
+    modal.querySelector(".modal-img").src = image;
+    modal.querySelector(".modal-title").innerText = title;
+    modal.querySelector(".modal-details").innerHTML = details;
+    modal.querySelector(".modal-link").href = link;
+    modal.style.display = "block";
+
+    // Asegurar que el evento de clic fuera del contenido está configurado
+    modal.addEventListener("click", (event) => {
+        if (!modalContent.contains(event.target)) {
+            closeModal();
+        }
+    });
 }
 
-// Cerrar modal al hacer clic en el botón de cerrar
-closeModal.addEventListener("click", () => {
+// Función para cerrar el modal
+function closeModal() {
+    const modal = document.getElementById("modal");
     modal.style.display = "none";
-});
+}
 
 // Cerrar modal al hacer clic fuera del contenido
 modal.addEventListener("click", (event) => {
