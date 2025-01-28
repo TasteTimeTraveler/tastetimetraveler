@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const toursContainer = document.querySelector(".cards-wrapper");
 
     // Cargar JSON dinámicamente
-    fetch("./tours.json")
+    fetch("/tours.json")
      console.log("estoy en fetch")
         .then((response) => response.json())
         .then((data) => {
