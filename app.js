@@ -208,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Función para abrir el modal
 function openModal(id, image, title, details, link) {
     const modal = document.getElementById("modal");
+    console.log(modal);
     const modalContent = modal.querySelector(".modal-content");
 
     modal.dataset.id = id; // Asigna el id al modal para referencia futura
