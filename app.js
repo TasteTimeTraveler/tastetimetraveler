@@ -169,10 +169,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cargar JSON dinámicamente
     fetch("./tours.json")
+     console.log("estoy en fetch")
         .then((response) => response.json())
         .then((data) => {
             data.forEach((tour) => {
                 // Crear cada tarjeta
+                console.log(data);
+                console.log(tour.id);
+                console.log(tour.image);
+                console.log(tour.title);
+                console.log(tour.description);
                 const card = document.createElement("div");
                 card.className = "col-12 col-md-4 mb-4";
                 card.innerHTML = `
