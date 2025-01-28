@@ -485,7 +485,7 @@ h2 {
     transform: scale(1.3);
 
 }
-/* Modal styles */
+/* Modal container */
 .modal {
     display: none;
     position: fixed;
@@ -497,10 +497,12 @@ h2 {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow-y: auto; /* Permite scroll si el contenido es muy grande */
 }
 
+/* Modal content */
 .modal-content {
-    background: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
@@ -511,66 +513,65 @@ h2 {
     animation: fadeIn 0.3s ease-in-out;
 }
 
-.modal-content img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-.modal-content h2 {
+/* Close button */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
+/* Modal image */
 .modal-image {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Modal title */
 .modal-title {
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 10px;
+    color: #222;
 }
 
+/* Modal text */
 .modal-text {
-    font-size: 1em;
-    color: #333;
+    font-size: 1rem;
+    color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.modal-content p {
-    font-size: 1rem;
-    color: #555;
-}
-
+/* Primary button */
 .btn-primary {
     background-color: #007bff;
-    color: white;
+    color: #ffffff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: #0056b3;
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
+/* Secondary action button */
 .btn-book {
     display: inline-block;
     background-color: #ff7f50;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -583,6 +584,7 @@ h2 {
     background-color: #ff5733;
 }
 
+/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
