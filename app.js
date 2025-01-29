@@ -186,8 +186,8 @@ function openModal(tourId) {
         document.querySelector("#modal .modal-title").innerText = tour.title;
         document.querySelector("#modal .modal-details").innerHTML = tour.details;
         document.querySelector("#modal .modal-link").href = tour.link;
-        document.querySelector("#modal .modal-include").href = tour.include;
-        document.querySelector("#modal .modal-price").href = tour.price;
+        document.querySelector("#modal .modal-include").innerHTML = tour.include;
+        document.querySelector("#modal .modal-price").innerHTML = tour.price;
 
         // Mostrar el modal
         document.getElementById("modal").style.display = "block";
