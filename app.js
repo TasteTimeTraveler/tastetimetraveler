@@ -182,10 +182,12 @@ function openModal(tourId) {
 
     if (tour) {
         // Actualizar contenido del modal
-        document.querySelector("#modal .modal-img").src = tour.image;
+        //document.querySelector("#modal .modal-img").src = tour.image;
         document.querySelector("#modal .modal-title").innerText = tour.title;
         document.querySelector("#modal .modal-details").innerHTML = tour.details;
         document.querySelector("#modal .modal-link").href = tour.link;
+        document.querySelector("#modal .modal-include").href = tour.include;
+        document.querySelector("#modal .modal-price").href = tour.price;
 
         // Mostrar el modal
         document.getElementById("modal").style.display = "block";
