@@ -525,21 +525,21 @@ h2 {
 }
 
 .modal-title {
-    font-size: 2rem;
+    font-size: 1.5 rem;
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
 }
 
 .modal-text {
-    font-size: 1em;
+    font-size: 0.8 rem;
     color: #333;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .modal-details, .modal-include, .modal-price {
-    font-size: 1.1rem;
+    font-size: 0.8 rem;
     color: #555;
     margin-bottom: 20px;
     text-align: left;
@@ -570,7 +570,7 @@ h2 {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 2rem;
+    font-size: 3 rem;
     cursor: pointer;
     color: #333;
     background-color: transparent;
