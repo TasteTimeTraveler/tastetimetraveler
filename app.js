@@ -167,22 +167,33 @@ document.addEventListener('DOMContentLoaded', function () {
 // Guardar los datos globalmente
 let toursData = [];
 
-// Cargar JSON y guardar datos globalmente
-fetch("/tours.json")
-    .then((response) => response.json())
-    .then((data) => {
-        toursData = data;
-    })
-    .catch((error) => console.error("Error loading JSON:", error));
+// Función asíncrona para cargar JSON
+async function cargarTours() {
+    try {
+        const response = await fetch("/tours.json");
+        toursData = await response.json();
+        console.log("JSON cargado correctamente:", toursData);
+    } catch (error) {
+        console.error("Error cargando JSON:", error);
+    }
+}
+
+// Llamar la función para cargar datos cuando inicie la página
+cargarTours();
 
 // Función para abrir el modal
-function openModal(tourId) {
+async function openModal(tourId) {
+    // Esperar a que los datos estén listos si aún no se han cargado
+    if (toursData.length === 0) {
+        console.log("Esperando carga del JSON...");
+        await cargarTours(); // Cargar si aún no está listo
+    }
+
     // Buscar el tour correspondiente en los datos
     const tour = toursData.find((item) => item.id === tourId);
 
     if (tour) {
         // Actualizar contenido del modal
-        //document.querySelector("#modal .modal-img").src = tour.image;
         document.querySelector("#modal .modal-title").innerText = tour.title;
         document.querySelector("#modal .modal-details").innerHTML = tour.details;
         document.querySelector("#modal .modal-link").href = tour.link;
@@ -192,7 +203,7 @@ function openModal(tourId) {
         // Mostrar el modal
         document.getElementById("modal").style.display = "block";
     } else {
-        console.error("Tour not found:", tourId);
+        console.error("Tour no encontrado:", tourId);
     }
 }
 
@@ -206,5 +217,7 @@ document.addEventListener("click", (event) => {
     const modal = document.getElementById("modal");
     const modalContent = modal.querySelector(".modal-content");
 
+    if (!modalContent.contains(event.target)) {
+        closeModal();
+    }
 });
-
