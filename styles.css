@@ -497,14 +497,15 @@ h2 {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 .modal-content {
     background: #fff;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 15px;
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     text-align: center;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -523,15 +524,10 @@ h2 {
     margin-bottom: 10px;
 }
 
-.modal-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
 .modal-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -542,22 +538,47 @@ h2 {
     margin-bottom: 20px;
 }
 
+.modal-details, .modal-include, .modal-price {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
 .modal-content p {
     font-size: 1rem;
     color: #555;
-}
-
-.modal-text, .modal-content p, .modal-details {
     text-align: left;
+    line-height: 1.6;
 }
 
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.modal-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
     cursor: pointer;
+    color: #333;
+    background-color: transparent;
+    border: none;
+}
+
+.close:hover {
+    color: #ff5733;
 }
 
 .btn-book {
