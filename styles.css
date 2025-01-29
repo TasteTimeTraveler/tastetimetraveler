@@ -532,6 +532,7 @@ h2 {
 .modal-title {
     font-size: 1.5em;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .modal-text {
@@ -544,6 +545,10 @@ h2 {
 .modal-content p {
     font-size: 1rem;
     color: #555;
+}
+
+.modal-text, .modal-content p, .modal-details {
+    text-align: left;
 }
 
 
@@ -565,6 +570,7 @@ h2 {
     font-size: 1rem;
     margin-top: 15px;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .btn-book:hover {
