@@ -24,7 +24,7 @@
         "title": "Explore to the interior and viewpoint of the Monument to the Mexican Revolution",
         "image": "./assets/galeria/revolucion3.jpg",
         "details": "<strong>Itinerary:</strong><br>● Foundations<br>● Panoramic Elevator<br>● Lantern<br>● Viewpoint",
-        "detailsLink": "https://www.eventbrite.com/e/tour-of-the-monument-to-the-revolution-in-mexico-city-tickets-1080752793699?aff=ebdsshcopyurl&utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp",
+        "link": "https://www.eventbrite.com/e/tour-of-the-monument-to-the-revolution-in-mexico-city-tickets-1080752793699?aff=ebdsshcopyurl&utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp",
         "alt": "Tour 4",
         "include": "<strong>Include:</strong><br>● Guide<br>● General access ticket<br>● Bottle of water",
         "price": "<strong>Price:</strong><br>$1200 MXN"
@@ -34,7 +34,7 @@
         "title": "A Royal Experience: Gardens and Views of Chapultepec Castle and Forest",
         "image": "./assets/galeria/chapultepec3.jpg",
         "details": "<strong>Itinerary:</strong><br>● Chapultepec Forest<br>● Chapultepec Castle",
-        "detailsLink": "https://www.eventbrite.com/e/discover-chapultepec-history-and-panorama-of-mexico-city-ticket-castillo-tickets-1081434803609?aff=ebdsshcopyurl&utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp",
+        "link": "https://www.eventbrite.com/e/discover-chapultepec-history-and-panorama-of-mexico-city-ticket-castillo-tickets-1081434803609?aff=ebdsshcopyurl&utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp",
         "alt": "Tour 5",
         "include": "<strong>Include:</strong><br>● Guide<br>● General access ticket to Chapultepec Castle<br>● Bottle of water",
         "price": "<strong>Price:</strong><br>$950 MXN"
@@ -44,7 +44,7 @@
         "title": "Explore Aztec Culture: Museum of Anthropology and Chapultepec Park",
         "image": "./assets/galeria/antropologia.jpg",
         "details": "<strong>Itinerary:</strong><br>● Chapultepec Forest<br>● Botanical Garden<br>● Papantla Flyers<br>● Mexica Hall at the Museum of Anthropology",
-        "detailsLink": "https://www.eventbrite.com/e/discover-chapultepec-history-ticket-museum-of-anthropology-tickets-1125792137589?aff=oddtdtcreator",
+        "link": "https://www.eventbrite.com/e/discover-chapultepec-history-ticket-museum-of-anthropology-tickets-1125792137589?aff=oddtdtcreator",
         "alt": "Tour 6",
         "include": "<strong>Include:</strong><br>● Guide<br>● General access ticket to the Anthropology Museum<br>● Bottle of water",
         "price": "<strong>Price:</strong><br>$950 MXN"
@@ -54,7 +54,7 @@
         "title": "Salsa Night in CDMX: Dance and Enjoy the Vibes",
         "image": "./assets/galeria/home.jpg",
         "details": "<strong>Itinerary:</strong><br>● Dance Class<br>● Ballroom Dancing<br>● Taqueria",
-        "detailsLink": "https://www.eventbrite.com/e/a-night-of-rhythm-and-flavor-dance-salsa-in-mexico-city-tickets-1210123926239?aff=oddtdtcreator",
+        "link": "https://www.eventbrite.com/e/a-night-of-rhythm-and-flavor-dance-salsa-in-mexico-city-tickets-1210123926239?aff=oddtdtcreator",
         "alt": "Tour 2",
         "include": "<strong>Include:</strong><br>● Guide<br>● Dance class<br>● Entrance to the dance hall<br>● Dinner (tacos)<br>● 1 drink at the dance hall<br>● Private transportation",
         "price": "<strong>Price:</strong><br>$2200 MXN"
@@ -64,7 +64,7 @@
         "title": "Counterculture and Urban Art: Exploring the Alternative Soul of CDMX",
         "image": "./assets/galeria/chopo7.jpeg",
         "details": "<strong>Itinerary:</strong><br>● Museo Universitario del Chopo<br>● Barrio Santa Maria la Ribera<br>● Biblioteca Vasconcelos<br>● Tianguis Cultural del Chopo",
-        "detailsLink": "https://www.eventbrite.com/e/walking-tour-chopo-market-revoltion-monument-mexico-city-tickets-1125802368189?aff=oddtdtcreator",
+        "link": "https://www.eventbrite.com/e/walking-tour-chopo-market-revoltion-monument-mexico-city-tickets-1125802368189?aff=oddtdtcreator",
         "alt": "Tour 7",
         "include": "<strong>Include:</strong><br>● Guide<br>● Street drinks tasting<br>● General admission to the Museo Universitario del Chopo<br>● Bottle of water",
         "price": "<strong>Price:</strong><br>$950 MXN"
@@ -74,7 +74,7 @@
         "title": "History, Culture and Daily Life Walk in Tlatelolco and La Lagunilla Market",
         "image": "./assets/galeria/TourLagunilla.jpg",
         "details": "<strong>Itinerary:</strong><br>● Zona arqueológica Tlatelolco<br>● Tianguis de la Lagunilla",
-        "detailsLink": "https://www.eventbrite.com/e/walking-tour-to-tlatelolco-and-la-lagunilla-market-mexico-city-tickets-1080163481049?aff=ebdsshcopyurl&utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp",
+        "link": "https://www.eventbrite.com/e/walking-tour-to-tlatelolco-and-la-lagunilla-market-mexico-city-tickets-1080163481049?aff=ebdsshcopyurl&utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp",
         "alt": "Tour 2",
         "include": "<strong>Include:</strong><br>● Guide<br>● General admission to the Tlatelolco archaeological site<br>● Food and drink tastings at the La Lagunilla market<br>● Bottle of water",
         "price": "<strong>Price:</strong><br>$1100 MXN"
@@ -84,7 +84,7 @@
         "title": "Get to Know Tepito: The Heart of Mexican Culture and Commerce",
         "image": "./assets/galeria/tepito1.jpeg",
         "details": "<strong>Itinerary:</strong><br>● Centro cultural Tepito<br>● Plaza Fray Bartolomé<br>● Mercado de Tepito<br>● Museo del Mezcal y Tequila",
-        "detailsLink": "https://www.eventbrite.com/e/tepito-the-heart-of-mexican-culture-and-commerce-tickets-1210210906399?aff=oddtdtcreator",
+        "link": "https://www.eventbrite.com/e/tepito-the-heart-of-mexican-culture-and-commerce-tickets-1210210906399?aff=oddtdtcreator",
         "alt": "Tour 2",
         "include": "<strong>Include:</strong><br>● Guide<br>● Food and drink tastings at the Tepito market<br>● Bottle of water<br>● Admission to the Mezcal and Tequila Museum",
         "price": "<strong>Price:</strong><br>$1100 MXN"
