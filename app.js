@@ -179,12 +179,14 @@ fetch("/tours.json")
 
 // Función para abrir el modal
 function openModal(tourId) {
+    console.log("hice clic");
     if (toursData.length === 0) {
         console.error("Data not loaded yet.");
         return;
     }
 
     const tour = toursData.find((item) => item.id === tourId);
+    console.log("const tour:", tour);
 
     if (tour) {
         document.querySelector("#modal .modal-img").src = tour.image;
@@ -193,6 +195,13 @@ function openModal(tourId) {
         document.querySelector("#modal .modal-include").innerHTML = tour.include;
         document.querySelector("#modal .modal-price").innerHTML = tour.price;
         document.querySelector("#modal .modal-link").href = tour.link;
+
+        console.log(tour.image);
+        console.log(tour.title);
+        console.log(tour.details);
+        console.log(tour.include);
+        console.log(tour.price);
+        console.log(tour.link);
 
         document.getElementById("modal").style.display = "block";
     } else {
