@@ -18,7 +18,7 @@ header {
     position: sticky;
     top: 0;
     background-color: white;
-    color: white;
+    color: black;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 0 20px;
@@ -45,7 +45,7 @@ h1 {
     font-size: 22px;
     color: #333;
     margin-bottom: 20px;
-    border-radius: 2px;
+
 }
 
 h2 {
@@ -156,6 +156,11 @@ h2 {
     color: #f8f9fa;
     font-weight: 600;
     margin-bottom: 150px;
+    position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 
@@ -186,19 +191,14 @@ h2 {
 
 
 /*experiencias carousel*/
-.carousel-dots {
+
+.carousel-dots, .carousel-dots2 {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.carousel-dots2 {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.dot {
+.dot, .dot2 {
     height: 10px;
     width: 10px;
     border-radius: 50%;
@@ -207,44 +207,20 @@ h2 {
     cursor: pointer;
 }
 
-.dot2 {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #ddd;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-
-.dot.active {
+.dot.active, .dot2.active {
     background-color: black;
 }
 
-.dot2.active {
-    background-color: black;
-}
 
-.tour-carousel {
+.tour-carousel, .tour-carousel-2 {
     display: flex;
-    overflow-x: scroll; /* Habilita el desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Desplazamiento suave entre elementos */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 16px;
     padding: 16px 0;
-    -ms-overflow-style: none; /* Para IE y Edge */
-    scrollbar-width: none; /* Para Firefox */
-    position: relative;
-}
-
-.tour-carousel-2 {
-    display: flex;
-    overflow-x: scroll; /* Habilita el desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Desplazamiento suave entre elementos */
-    -webkit-overflow-scrolling: touch;
-    gap: 16px;
-    padding: 16px 0;
-    -ms-overflow-style: none; /* Para IE y Edge */
-    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     position: relative;
 }
 
@@ -387,7 +363,15 @@ h2 {
 
     .title-hero{
         font-weight: 400;
-        top: 40%;
+        top: auto;
+        left: auto;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
     }
 
     .tour-carousel {
@@ -401,7 +385,7 @@ h2 {
 }
 
     .menu {
-        display: none;
+        opacity: 0;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -461,6 +445,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .contact-option {
