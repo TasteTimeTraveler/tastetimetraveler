@@ -164,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
 // Guardar los datos globalmente
 let toursData = [];
 
@@ -172,24 +173,27 @@ fetch("/tours.json")
     .then((response) => response.json())
     .then((data) => {
         toursData = data;
+        console.log("Tours data loaded:", toursData); // Para verificar que se cargó correctamente
     })
     .catch((error) => console.error("Error loading JSON:", error));
 
 // Función para abrir el modal
 function openModal(tourId) {
-    // Buscar el tour correspondiente en los datos
+    if (toursData.length === 0) {
+        console.error("Data not loaded yet.");
+        return;
+    }
+
     const tour = toursData.find((item) => item.id === tourId);
 
     if (tour) {
-        // Actualizar contenido del modal
-        //document.querySelector("#modal .modal-img").src = tour.image;
+        document.querySelector("#modal .modal-img").src = tour.image;
         document.querySelector("#modal .modal-title").innerText = tour.title;
         document.querySelector("#modal .modal-details").innerHTML = tour.details;
-        document.querySelector("#modal .modal-link").href = tour.link;
         document.querySelector("#modal .modal-include").innerHTML = tour.include;
         document.querySelector("#modal .modal-price").innerHTML = tour.price;
+        document.querySelector("#modal .modal-link").href = tour.link;
 
-        // Mostrar el modal
         document.getElementById("modal").style.display = "block";
     } else {
         console.error("Tour not found:", tourId);
@@ -201,13 +205,9 @@ function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
 
-
-// Cerrar modal al hacer clic fuera del contenido
-document.addEventListener("click", (event) => {
-    const modal = document.getElementById("modal");
-    const modalContent = modal.querySelector(".modal-content");
-
-    if (!modalContent.contains(event.target)) {
+// Cerrar modal solo si se hace clic en el fondo oscuro
+document.getElementById("modal").addEventListener("click", (event) => {
+    if (event.target.id === "modal") {
         closeModal();
     }
 });
