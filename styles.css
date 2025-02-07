@@ -157,10 +157,10 @@ h2 {
     font-weight: 600;
     margin-bottom: 150px;
     position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 
