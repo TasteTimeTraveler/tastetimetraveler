@@ -220,3 +220,47 @@ document.getElementById("modal").addEventListener("click", (event) => {
         closeModal();
     }
 });
+
+//funcionalidad modal
+
+const tourData = [
+    {
+        "id": "tourCentro",
+        "title": "Walking tour of the historic center of Mexico City",
+        "image": "./assets/galeria/TourCentro.jpg",
+        "details": "<strong>Itinerary:</strong><br>● Shamans' Area<br>● Archaeological Zone of Templo Mayor (outside the museum)<br>● Interior of the Metropolitan Cathedral...",
+        "link": "https://www.eventbrite.com/e/walking-tour-of-the-historic-center-of-mexico-city-tickets-938938148277?aff=oddtdtcreator",
+        "include": "<strong>Include:</strong><br>● Guide<br>● Bottle of water<br>● Street food tastings...",
+        "price": "<strong>Price:</strong><br>$1200 MXN"
+    },
+    {
+        "id": "tourBasilica",
+        "title": "Know the Guadalupan Codex and the culture of this precinct",
+        "image": "./assets/galeria/basilica2.JPG",
+        "details": "<strong>Itinerary:</strong><br>● New Basilica<br>● Old Houses<br>● Tepeyac Hill<br>● Handicrafts Market",
+        "link": "https://www.eventbrite.com/e/1081451423319?aff=oddtdtcreator",
+        "include": "<strong>Include:</strong><br>● Guide<br>● Bottle of water<br>● Access to the Basilica, chapels, bell tower, and market",
+        "price": "<strong>Price:</strong><br>$950 MXN"
+    }
+];
+
+document.querySelectorAll('.btn-vermas').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const card = event.target.closest('.card');
+        const title = card.querySelector('.card-title').textContent;
+        const tour = tourData.find(t => t.title === title);
+        
+        if (tour) {
+            document.getElementById('modalTitle').textContent = tour.title;
+            document.getElementById('modalImage').src = tour.image;
+            document.getElementById('modalImage').alt = tour.title;
+            document.getElementById('modalDetails').innerHTML = tour.details;
+            document.getElementById('modalInclude').innerHTML = tour.include;
+            document.getElementById('modalPrice').innerHTML = tour.price;
+            document.getElementById('modalLink').href = tour.link;
+            
+            const modal = new bootstrap.Modal(document.getElementById('tourModal'));
+            modal.show();
+        }
+    });
+});
