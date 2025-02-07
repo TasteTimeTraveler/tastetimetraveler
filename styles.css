@@ -141,32 +141,57 @@ h2 {
     object-fit: cover; /* Hace que la imagen mantenga la proporción sin deformarse */
 }
 
-/* Hero content (texto sobre la imagen) */
-.hero-content {
+/* Contenedor principal */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Imagen de fondo */
+.hero-image {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Coloca la imagen detrás del texto */
+}
+
+/* Filtro de superposición (opcional) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Oscurece un poco el fondo */
+    z-index: 0;
+}
+
+/* Contenido (título + botón) */
+.hero-content {
+    position: relative;
     text-align: center;
     color: white;
+    z-index: 1; /* Asegura que esté sobre la imagen */
 }
 
-.title-hero{
+/* Título */
+.title-hero {
     font-size: 3.5rem;
-    color: #f8f9fa;
     font-weight: 600;
-    margin-bottom: 150px;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    margin-bottom: 20px;
 }
 
-
-
-/* Estilo del botón de llamada a la acción */
+/* Botón */
 .cta-button {
+    display: inline-block;
     padding: 15px 30px;
     background-color: black;
     color: white;
@@ -179,6 +204,7 @@ h2 {
 .cta-button:hover {
     background: linear-gradient(90deg, #11a0a7, #73d35e); 
 }
+
 
 
 /*texto about*/
