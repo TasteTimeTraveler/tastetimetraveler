@@ -165,62 +165,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Guardar los datos globalmente
-let toursData = [];
-
-// Cargar JSON y guardar datos globalmente
-fetch("/tours.json")
-    .then((response) => response.json())
-    .then((data) => {
-        toursData = data;
-        console.log("Tours data loaded:", toursData); // Para verificar que se cargó correctamente
-    })
-    .catch((error) => console.error("Error loading JSON:", error));
-
-// Función para abrir el modal
-function openModal(tourId) {
-    console.log("hice clic");
-    if (toursData.length === 0) {
-        console.error("Data not loaded yet.");
-        return;
-    }
-
-    const tour = toursData.find((item) => item.id === tourId);
-    console.log("const tour:", tour);
-
-    if (tour) {
-        document.querySelector("#modal .modal-img").src = tour.image;
-        document.querySelector("#modal .modal-title").innerText = tour.title;
-        document.querySelector("#modal .modal-details").innerHTML = tour.details;
-        document.querySelector("#modal .modal-include").innerHTML = tour.include;
-        document.querySelector("#modal .modal-price").innerHTML = tour.price;
-        document.querySelector("#modal .modal-link").href = tour.link;
-
-        console.log(tour.image);
-        console.log(tour.title);
-        console.log(tour.details);
-        console.log(tour.include);
-        console.log(tour.price);
-        console.log(tour.link);
-
-        document.getElementById("modal").style.display = "block";
-    } else {
-        console.error("Tour not found:", tourId);
-    }
-}
-
-// Función para cerrar el modal
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
-
-// Cerrar modal solo si se hace clic en el fondo oscuro
-document.getElementById("modal").addEventListener("click", (event) => {
-    if (event.target.id === "modal") {
-        closeModal();
-    }
-});
-
 //funcionalidad chat
 document.addEventListener("DOMContentLoaded", function () {
     const whatsappButton = document.getElementById("whatsapp-button");
