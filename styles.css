@@ -691,13 +691,6 @@ h2 {
     margin: 0 auto;
   }
   
-  /*h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
-    color: #607D8B;
-    margin-bottom: 30px;
-  }*/
-  
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -710,6 +703,7 @@ h2 {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 250px;
   }
   
   .gallery-item:hover .gallery-image {
