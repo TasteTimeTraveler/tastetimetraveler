@@ -588,6 +588,7 @@ h2 {
     cursor: pointer;
     text-align: left;
     border-radius: 5px;
+    color: black;
 }
 
 .chat-question:hover {
