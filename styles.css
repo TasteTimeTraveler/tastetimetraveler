@@ -41,6 +41,11 @@ footer {
     padding: 20px;
 }
 
+#footer-text{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 h1 {
     font-size: 22px;
     color: #333;
