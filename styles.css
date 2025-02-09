@@ -47,14 +47,14 @@ footer {
 }
 
 .formaspago{
-    background-color: #333;
     background-color: white;
-    padding: 20px
 }
 
 #footer-text{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    background-color: #333;
+
 }
 
 h1 {
