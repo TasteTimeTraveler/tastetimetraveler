@@ -527,7 +527,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
 }
 
 #whatsapp-button img {
@@ -535,9 +534,6 @@ h2 {
     height: 40px;
 }
 
-#whatsapp-button:hover {
-    transform: scale(1.2);
-}
 
 /* Chat flotante */
 .whatsapp-chat {
