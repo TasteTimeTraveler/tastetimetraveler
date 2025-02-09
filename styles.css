@@ -453,7 +453,7 @@ h2 {
 
     .menu.active {
         display: flex;
-        width: -webkit-fill-available;
+       
     }
 
     .hamburger {
