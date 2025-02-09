@@ -51,10 +51,9 @@ footer {
 }
 
 #footer-text{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     background-color: #333;
-
+    color: white;
+    padding: 20px 0;
 }
 
 h1 {
