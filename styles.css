@@ -614,3 +614,61 @@ h2 {
 .chat-footer a:hover {
     background: #1da851;
 }
+
+/* Ajustes para pantallas menores a 600px (Móviles) */
+@media screen and (max-width: 600px) {
+    #whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #whatsapp-button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .whatsapp-chat {
+        width: 90%;
+        right: 5%;
+        bottom: 70px;
+    }
+
+    .chat-header {
+        font-size: 14px;
+    }
+
+    .chat-body {
+        font-size: 14px;
+    }
+
+    .chat-question {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .chat-footer a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Ajustes para pantallas entre 600px y 1024px (Tablets) */
+@media screen and (max-width: 1024px) {
+    #whatsapp-button {
+        width: 55px;
+        height: 55px;
+    }
+
+    #whatsapp-button img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .whatsapp-chat {
+        width: 80%;
+        right: 10%;
+    }
+}
+
