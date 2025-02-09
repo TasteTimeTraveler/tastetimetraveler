@@ -221,6 +221,32 @@ document.getElementById("modal").addEventListener("click", (event) => {
     }
 });
 
-//funcionalidad modal
+//funcionalidad chat
+document.addEventListener("DOMContentLoaded", function () {
+    const whatsappButton = document.getElementById("whatsapp-button");
+    const chatBox = document.querySelector(".whatsapp-chat");
+    const closeChat = document.getElementById("close-chat");
+    const chatQuestions = document.querySelectorAll(".chat-question");
+    const goToWhatsapp = document.getElementById("go-to-whatsapp");
+
+    // Mostrar/Ocultar el chat
+    whatsappButton.addEventListener("click", function () {
+        chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
+    });
+
+    closeChat.addEventListener("click", function () {
+        chatBox.style.display = "none";
+    });
+
+    // Agregar preguntas al enlace de WhatsApp
+    chatQuestions.forEach(button => {
+        button.addEventListener("click", function () {
+            const message = encodeURIComponent(this.getAttribute("data-message"));
+            goToWhatsapp.href = `https://wa.me/5542690991?text=${message}`;
+            window.open(goToWhatsapp.href, "_blank");
+        });
+    });
+});
+
 
 
