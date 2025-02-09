@@ -394,7 +394,6 @@ h2 {
 .redes-sociales {
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
 
 .redes-sociales a {
