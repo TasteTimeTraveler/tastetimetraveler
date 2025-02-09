@@ -59,7 +59,6 @@ footer {
 
 .img-pagos{
     height: auto;
-    width: -webkit-fill-available;
 }
 
 h1 {
@@ -459,6 +458,10 @@ h2 {
 
     .hamburger {
         display: flex;
+    }
+
+    .img-pagos{
+        width: -webkit-fill-available;
     }
 
     .contact-option img {
