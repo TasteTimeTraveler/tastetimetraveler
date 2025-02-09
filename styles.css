@@ -469,6 +469,9 @@ h2 {
      .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+      .slider {
+        height: 200px; /* Reducir la altura en móviles */
+    }
 }
 
 @media (max-width: 480px) {
@@ -717,3 +720,35 @@ h2 {
     transition: transform 0.3s ease-in-out;
   }
   
+
+  /* Estilo del Slider */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 300px; /* Ajusta la altura según necesites */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+    display: flex;
+    width: 300%; /* 3 imágenes = 300% */
+    animation: slide 9s infinite; /* Cambia cada 3s */
+}
+
+.slider-image {
+    width: 100%;
+    flex: 1;
+    object-fit: cover;
+}
+
+/* Animación del Slider */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+

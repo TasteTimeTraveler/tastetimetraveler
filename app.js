@@ -190,3 +190,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slider-image");
+    const totalSlides = slides.length;
+    
+    function changeSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        document.querySelector(".slider-container").style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(changeSlide, 1000); // Cambia cada 1 segundos
+});
