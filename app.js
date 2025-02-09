@@ -198,9 +198,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const sliderContainer = document.querySelector(".slider-container");
 
     function changeSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Reinicia el slider al inicio
+        }
         sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    setInterval(changeSlide, 6000); // Cambia cada 3 segundos
+    setInterval(changeSlide, 9000); // Cambia cada 9 segundos
 });
