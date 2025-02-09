@@ -201,5 +201,5 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".slider-container").style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    setInterval(changeSlide, 1000); // Cambia cada 1 segundos
+    setInterval(changeSlide, 3000); // Cambia cada 1 segundos
 });
