@@ -193,13 +193,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
-    const slides = document.querySelectorAll(".slider-image");
+    const slides = document.querySelectorAll(".slide");
     const totalSlides = slides.length;
-    
+    const sliderContainer = document.querySelector(".slider-container");
+
     function changeSlide() {
         currentIndex = (currentIndex + 1) % totalSlides;
-        document.querySelector(".slider-container").style.transform = `translateX(-${currentIndex * 100}%)`;
+        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    setInterval(changeSlide, 6000); // Cambia cada 6 segundos
+    setInterval(changeSlide, 3000); // Cambia cada 3 segundos
 });
