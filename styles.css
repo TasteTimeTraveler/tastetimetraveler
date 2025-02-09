@@ -461,10 +461,10 @@ h2 {
         display: flex;
     }
 
-    .redes-sociales img {
+    .contact-option img {
         width: 30px;
         height: 30px;
-    }
+     }
 }
 
 @media (max-width: 480px) {
