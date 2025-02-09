@@ -401,12 +401,6 @@ h2 {
     margin: 0 10px; 
 }
 
-.redes-sociales img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    transition: transform 0.3sease !important;
-}
 
 
 @media (max-width: 768px) {
