@@ -35,6 +35,11 @@ button {
 }
 
 footer {
+
+    text-align: center;
+    padding: 20px;
+}
+.redes-sociales{
     background-color: #333;
     color: #fff;
     text-align: center;
