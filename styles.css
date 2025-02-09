@@ -44,7 +44,7 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 60px;
+    padding: 30px;
 }
 
 .formaspago{
@@ -462,8 +462,8 @@ h2 {
     }
 
     .contact-option img {
-        width: 30px;
-        height: 30px;
+        width: 40px !important;
+        height: 40px !important;
      }
 }
 
