@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatBox = document.querySelector(".whatsapp-chat");
     const closeChat = document.getElementById("close-chat");
     const chatQuestions = document.querySelectorAll(".chat-question");
-    const goToWhatsapp = document.getElementById("go-to-whatsapp");
+    const chatMessage = document.getElementById("chat-message");
 
     // Mostrar/Ocultar el chat
     whatsappButton.addEventListener("click", function () {
@@ -182,15 +182,11 @@ document.addEventListener("DOMContentLoaded", function () {
         chatBox.style.display = "none";
     });
 
-    // Agregar preguntas al enlace de WhatsApp
+    // Mostrar respuestas personalizadas dentro del chat
     chatQuestions.forEach(button => {
         button.addEventListener("click", function () {
-            const message = encodeURIComponent(this.getAttribute("data-message"));
-            goToWhatsapp.href = `https://wa.me/5542690991?text=${message}`;
-            window.open(goToWhatsapp.href, "_blank");
+            const response = this.getAttribute("data-response");
+            chatMessage.innerHTML = response; // Muestra la respuesta en el chat
         });
     });
 });
-
-
-
