@@ -56,6 +56,11 @@ footer {
     padding: 20px 0;
 }
 
+.img-pagos{
+    height: auto;
+    width: -webkit-fill-available;
+}
+
 h1 {
     font-size: 22px;
     color: #333;
