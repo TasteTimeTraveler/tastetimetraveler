@@ -509,12 +509,6 @@ h2 {
 }
 
 
-.contact-option.whatsapp:hover {
+.contact-option:hover {
     transform: scale(1.3);
-
-}
-
-.contact-option.gmail:hover {
-    transform: scale(1.3);
-
 }
