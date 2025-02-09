@@ -548,6 +548,7 @@ h2 {
     flex-direction: column;
     font-family: Arial, sans-serif;
     z-index: 1000;
+    color: black;
 }
 
 .chat-header {
