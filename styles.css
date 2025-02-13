@@ -221,6 +221,11 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
+.cta{
+    background-color: white ;
+    color: black;
+}
+
 .cta-button:hover {
     background: linear-gradient(90deg, #11a0a7, #73d35e); 
 }
