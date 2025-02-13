@@ -191,20 +191,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    let currentIndex = 0;
-    const slides = document.querySelectorAll(".slide");
-    const totalSlides = slides.length;
-    const sliderContainer = document.querySelector(".slider-container");
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
 
-    function changeSlide() {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Reinicia el slider al inicio
-        }
-        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+function moveSlide(step) {
+    index = (index + step + totalSlides) % totalSlides;
+    document.querySelector(".slider-container").style.transform = `translateX(-${index * 100}%)`;
+}
 
-    setInterval(changeSlide, 9000); // Cambia cada 9 segundos
-});
+setInterval(() => moveSlide(1), 5000);
