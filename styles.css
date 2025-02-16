@@ -719,7 +719,6 @@ h2 {
     margin-bottom: 20px;
 }
 .gallery-container {
-    justify-content: center;
     display: flex !important;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
