@@ -161,6 +161,11 @@ h2 {
     object-fit: cover; /* Hace que la imagen mantenga la proporción sin deformarse */
 }
 
+.hero-description{
+    margin-bottom: 5rem;
+}
+
+
 /* Contenedor principal */
 .hero-section {
     position: relative;
@@ -229,8 +234,6 @@ h2 {
 .cta-button:hover {
     background: linear-gradient(90deg, #11a0a7, #73d35e); 
 }
-
-
 
 /*texto about*/
 .main-content {
@@ -328,12 +331,12 @@ h2 {
 }
 
 .tour-title {
-    font-size: 1rem; /* Ajusta el tamaño del texto según sea necesario */
-    font-weight: bold; /* Establece un peso de fuente más pesado */
-    line-height: 1.3; /* Asegura un buen espaciado entre las líneas */
-    white-space: normal; /* Permite que el texto se ajuste en múltiples líneas */
-    word-wrap: break-word; /* Asegura que las palabras largas se dividan si es necesario */
-    margin-bottom: 10px; /* Ajusta el espacio entre el título y el resto del contenido */
+    font-size: 1rem; 
+    font-weight: bold; 
+    line-height: 1.3; 
+    white-space: normal; 
+    word-wrap: break-word; 
+    margin-bottom: 10px; 
 }
 
 .card-text {
