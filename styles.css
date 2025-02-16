@@ -249,6 +249,10 @@ h2 {
 
 /*experiencias carousel*/
 
+.title-experiences{
+    color: white;
+}
+
 .tours-grid{
     background-color: black;
 }
