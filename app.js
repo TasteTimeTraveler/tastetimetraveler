@@ -194,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /*gallery*/
 
 document.querySelectorAll('.grid-gallery img').forEach(img => {
+    console.log(img);
     img.addEventListener('click', function () {
         const lightbox = document.createElement('div');
         lightbox.id = 'lightbox';
