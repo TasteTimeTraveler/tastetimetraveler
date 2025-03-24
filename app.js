@@ -211,3 +211,86 @@ document.querySelectorAll('.grid-gallery img').forEach(img => {
         });
     });
 });
+/*
+function ajustargaleria_2() {
+    let galeria_2 = document.getElementById(".grid-gallery");
+    if (!galeria_2) return; 
+
+    let imagenes_2 = document.querySelectorAll("#galeria_2 .imagen_2_2");
+
+    if (window.innerWidth <= 768) { 
+        // Estilo carrusel en móviles
+        galeria_2.style.display = "flex";
+        galeria_2.style.overflowX = "auto";
+        galeria_2.style.scrollSnapType = "x mandatory";
+        galeria_2.style.whiteSpace = "nowrap";
+        galeria_2.style.scrollBehavior = "smooth";
+        galeria_2.style.padding = "10px";
+        galeria_2.style.gap = "10px";
+
+        imagenes_2.forEach(img => {
+            img.style.flex = "0 0 90vw"; 
+            img.style.height = "70vh"; 
+            img.style.scrollSnapAlign = "center";
+            img.style.position = "relative";
+            img.style.overflow = "hidden";
+            img.style.borderRadius = "15px";
+            img.style.margin = "0 5px";
+
+            let imagen = img.querySelector("img");
+            imagen.style.width = "100%";
+            imagen.style.height = "100%";
+            imagen.style.objectFit = "cover";
+            imagen.style.position = "absolute";
+            imagen.style.top = "0";
+            imagen.style.left = "0";
+            imagen.style.transition = "transform 0.3s ease-in-out"; // Animación suave
+
+            // Hover para realzar imagen
+            img.addEventListener("mouseenter", () => {
+                imagen.style.transform = "scale(1.05)"; // Efecto de zoom
+            });
+
+            img.addEventListener("mouseleave", () => {
+                imagen.style.transform = "scale(1)"; 
+            });
+        });
+    } else { 
+        // Estilo galería en pantallas grandes
+        galeria_2.style.display = "grid";
+        galeria_2.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
+        galeria_2.style.gap = "10px";
+        galeria_2.style.padding = "20px";
+        galeria_2.style.justifyContent = "center";
+
+        imagenes_2.forEach(img => {
+            img.style.height = "250px";
+            img.style.width = "100%";
+            img.style.position = "relative";
+            img.style.overflow = "hidden";
+            img.style.borderRadius = "15px"; // Bordes redondeados
+
+            let imagen = img.querySelector("img");
+            imagen.style.width = "100%";
+            imagen.style.height = "100%";
+            imagen.style.objectFit = "cover";
+            imagen.style.position = "absolute";
+            imagen.style.top = "0";
+            imagen.style.left = "0";
+            imagen.style.transition = "transform 0.3s ease-in-out"; // Animación suave
+
+            // Hover para realzar imagen
+            img.addEventListener("mouseenter", () => {
+                imagen.style.transform = "scale(1.05)"; // Efecto de zoom
+            });
+
+            img.addEventListener("mouseleave", () => {
+                imagen.style.transform = "scale(1)"; 
+            });
+        });
+    }
+}
+
+ajustargaleria_2();
+window.addEventListener("resize", ajustargaleria_2);
+*/
